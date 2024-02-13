@@ -1,6 +1,48 @@
-/*responsive*/
-@media screen and (max-width:480px){
+/*formato de la pagina completa*/
+    html{
+        width: 940px;
+        position: absolute left;
+        margin: 0 auto;
+    }
+
+/*cuerpo*/
+    section{
+        margin: 40px 0;
+        font-size: 50px;
+    }
+
+    main label{
+        display: block;
+        
+        text-align: center;
+        margin: 0 0 10px;
+    }
+
+    .cuadroTexto{
+        display: block;
+        margin: 10px 10px 10px 10px;
+        padding: 10px 25% 10px 25%;
+        width: 50%;
+        border: none;
+    }
+
+    .container__boton {
+        border-radius: 16px;
+        background: #1875E8;
+        padding: 16px 24px;
+        width: 100%;
+        font-size: 24px;
+        font-weight: 700;
+        border: none;
+        margin-top: 2rem;
+    }
+    
+    .container__boton:disabled {
+        background: #898989;
+    }
+ /*responsive*/
+    @media screen and (max-width:480px){
 
 
-}
+    }
 
