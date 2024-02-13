@@ -2,6 +2,7 @@
 
 <html lang="es">
     <head>
+        <title>Encriptador</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-widht">
         <link rel="stylesheet" href="reset.css">
@@ -9,11 +10,18 @@
     </head>
     <body>
         <header>
-
+            <div class="cabecera">
+            <h1><img src="imagenes/logo.jpeg" alt="Logo del diseNador" width="128px" height="128px"></h1>
         </header>
         <main>
             <section>
-            </section>
+                <label for="textoAEncriptar">Ingrese el texto aqui</label>
+                <textarea cols="100" rows="30" id="textoAEncriptar" class="cuadroTexto" required placeholder="! Solo letras minusculas y sin acentos"></textarea>
+            <div class="chute container__botones">
+                <button onclick="verificarIntento();" class="container__boton">Encriptar</button>
+                <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Desencriptar</button>
+            </div>
+           </section>
         </main>
         <footer>
 
