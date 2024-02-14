@@ -1,44 +1,98 @@
 /*formato de la pagina completa*/
     html{
         width: 940px;
-        position: absolute left;
+        position: relative;
         margin: 0 auto;
+        background: #eaf6f7;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+        color: #1616a6;
+        text-shadow: 10px 10px 0 0  #1616a6;
+        opacity: .8;
+    }
+/*cabecera con logo*/
+    h1 img{
+        display: block;
+        padding: 0 0 20px 0;
     }
 
 /*cuerpo*/
-    section{
-        margin: 40px 0;
-        font-size: 50px;
-    }
-
-    main label{
-        display: block;
+    section {
+        height: 80%;
         
-        text-align: center;
-        margin: 0 0 10px;
     }
-
-    .cuadroTexto{
-        display: block;
-        margin: 10px 10px 10px 10px;
-        padding: 10px 25% 10px 25%;
-        width: 50%;
-        border: none;
-    }
-
-    .container__boton {
-        border-radius: 16px;
-        background: #1875E8;
-        padding: 16px 24px;
-        width: 100%;
-        font-size: 24px;
-        font-weight: 700;
-        border: none;
-        margin-top: 2rem;
+    .area_mensajes{
+        display: grid;
+        width: 60%;
+        font-size: 27px;
+        border-color: #eaf6f7;;
+        border-radius: 20px;
+        text-overflow: unset;
     }
     
+    .cuadroTexto{
+        resize: none;
+        padding: 15% 0 0 0;
+        width: 100%;
+        border-radius: 20px;
+        border-color: #eaf6f7;;
+        background: none;
+    }
+
+    .cuadroTexto::placeholder{
+        font-size: 30px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #1616a6;
+     
+    }
+
+    .cuadroTexto2 {
+        display: grid;
+        width: 100%;
+        margin: 0 0 0 10px; 
+        resize: none;
+        border-radius: 20px;
+        background-color: #FFFFFF;
+        border-color: #eaf6f7;
+        background-image: url("/imagenes/Muñeco.png");
+    }
+
+    .boton_encriptar, .boton_desencriptar {
+        display: inline-block;
+        padding: 7% 20% ;
+        font-size: 30px;
+        margin: 1em 1em 1em 1em;
+        width: 30%;
+        height: 40%;
+        border-radius: 16px;
+        background: #3333FF;
+        font-size: 10px;
+        color: #FFFFFF;
+        border: none;
+    }
+
+    .instrucciones{
+        display: block;
+        font-size: 10px;
+    }
+
     .container__boton:disabled {
         background: #898989;
+    }
+
+    .area_resultados{
+        width: 30%;
+       
+    }
+    .area_mensajes, .area_resultados{
+        display: inline-block;
+        height: 100%;
     }
  /*responsive*/
     @media screen and (max-width:480px){
@@ -46,3 +100,20 @@
 
     }
 
+/*
+        background-color: #FFFFFF;
+        margin: o auto;
+        width: 30%;
+        border-color: #eaf6f7;;
+        border-radius: 20px;
+        text-overflow: unset;
+        resize: none;
+        width: 37%;
+        font-size: 38px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #1616a6;
+        */
