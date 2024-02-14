@@ -7,24 +7,35 @@
         <meta name="viewport" content="width=device-widht">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <div class="cabecera">
-            <h1><img src="imagenes/logo.jpeg" alt="Logo del diseNador" width="128px" height="128px"></h1>
+            <h1><img src="imagenes/logo.jpeg" alt="Logo del diseNador" width="128px" height="128px" ></h1>
         </header>
         <main>
             <section>
-                <label for="textoAEncriptar">Ingrese el texto aqui</label>
-                <textarea cols="100" rows="30" id="textoAEncriptar" class="cuadroTexto" required placeholder="! Solo letras minusculas y sin acentos"></textarea>
-            <div class="chute container__botones">
-                <button onclick="verificarIntento();" class="container__boton">Encriptar</button>
-                <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Desencriptar</button>
-            </div>
+                <div class="area_mensajes">
+                    <textarea cols="10" rows="30" id="texto_a_encriptar" class="cuadroTexto" required placeholder="Ingrese el texto aqui"></textarea>
+                    <label class="instrucciones">! Solo letras minusculas y sin acentos</label><button onclick="verificarIntento();" class="boton_encriptar">Encriptar</button>
+                    <button onclick="reiniciarJuego();" class="boton_desencriptar" id="reiniciar" disabled>Desencriptar</button>
+       
+                </div>
+                <div class="area_resultados">
+                    <textarea cols="10" rows="40" id="texto_encriptado" class="cuadroTexto2" placeholder="Ningun mensaje fue encontrado Ingresa el texto que desees encriptar o desencriptar" disabled ></textarea>
+    
+                   
+                    
+                </div>
+                 
            </section>
         </main>
         <footer>
 
         </footer>
+        <script src="app.js"></script>
     </body>
 </html>
