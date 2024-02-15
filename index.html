@@ -12,30 +12,29 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="cabecera">
-            <h1><img src="imagenes/logo.jpeg" alt="Logo del diseNador" width="128px" height="128px" ></h1>
-        </header>
-        <main>
-            <section>
-                <div class="area_mensajes">
-                    <textarea cols="10" rows="30" id="texto_a_encriptar" class="cuadroTexto" required placeholder="Ingrese el texto aqui"></textarea>
-                    <label class="instrucciones">! Solo letras minusculas y sin acentos</label><button onclick="verificarIntento();" class="boton_encriptar">Encriptar</button>
-                    <button onclick="reiniciarJuego();" class="boton_desencriptar" id="reiniciar" disabled>Desencriptar</button>
-       
-                </div>
-                <div class="area_resultados">
-                    <textarea cols="10" rows="40" id="texto_encriptado" class="cuadroTexto2" placeholder="Ningun mensaje fue encontrado Ingresa el texto que desees encriptar o desencriptar" disabled ></textarea>
-    
-                   
-                    
-                </div>
-                 
-           </section>
-        </main>
-        <footer>
+        <div class="primer_bloque">    
+            <img src="imagenes/logo.png" width="120px" height="48px" alt="Logo del diseNador" class="logo_superior">
+        </div>
 
-        </footer>
+        
+        <div class="segundo_bloque">
+            <textarea cols="10" rows="27" id="texto_a_encriptar" class="cuadroTexto" required placeholder="Ingrese el texto aqui"></textarea>
+            <img src="/imagenes/Frame 1.png" class="instrucciones">
+            <div class="botones">
+                <button onclick="verificarIntento();" class="boton_encriptar">Encriptar</button>
+                <button onclick="reiniciarJuego();" class="boton_desencriptar" id="reiniciar" disabled>Desencriptar</button>
+            </div>
+        </div>
+        
+        <div class="tercer_bloque">
+            <img src="imagenes/Muñeco.png"  alt="Dibujo Niño con lupa" width="336" height="304" class="imagen_mono"></textarea>
+            <div class="mensaje_estado">
+                <label class="texto">Ningun mensaje fue encontrado</label>
+            </div>
+            <div class="mensaje_estado2">
+                <label class="texto2">Ingresa el texto que desees encriptar desencriptar</label>
+            </div>
+        </div>      
         <script src="app.js"></script>
     </body>
 </html>
