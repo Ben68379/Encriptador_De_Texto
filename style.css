@@ -1,54 +1,58 @@
 /*formato de la pagina completa*/
-    html{
-        width: 1280px;
+    html   {
+        width: 1440px;
+        height: 1024px;
         position: relative;
         margin: 0 auto;
         background: #F3F5FC;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
-        font-weight: normal;
         font-style: normal;
+        font-variation-settings:"slnt" 0;
         color: #0A3871;
-        text-shadow: 10px 10px 0 0  #1616a6;
-        opacity: .8;
-    }
+        }
   
 /*primer bloque*/
     .primer_bloque{
         
-        width: 170px;
+        width: 240px;
         height: 100%;
         vertical-align: top;
-        margin: 30px 0 0 0;
+        margin: 40px 0 0 0;
 
     }
     
 /*segundo bloque*/
     .segundo_bloque{
         display: block;
-        width: 700px;
+        width: 740px;
         height: 100%;
 
     }
     .cuadroTexto{
         margin: 5em 0 0 0 ;
+        word-wrap:break-word;
         display: block;
         width: 90%;
-        font-size: 24px;
+        font-size: 32px;
         resize: none;
         border-radius: 15px;
         border: none;
+        outline: none;
         background: #F3F5FC;
+        color: #0A3871;
+
     }
     .cuadroTexto::placeholder{
         color: hsl(216, 87%, 20%);
         font-size: 32px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400px;
         text-shadow: rgba(10, 56, 113, 10) 10px 10px 0 0;
         font-style: normal;
     }
+
     .instrucciones{
         display: block;
         margin: 1opx 0 10px 0;
@@ -59,10 +63,12 @@
     }
 
     .boton_encriptar, .boton_desencriptar{
-        width: 45%;
+        width: 328px;
         padding: 1.2em 0 1.2em 0;
         border-radius: 20px;
         margin: 0 0 0 0;
+        font-size: 16px;
+        font-weight: 400;
 
     }
 
@@ -85,8 +91,8 @@
         height: 944px;
         background-color: #FFFFFF;
         border-radius: 20px;
-        margin: 30px 0 30px 0;
-        
+        margin: 40px 0 30px 0;
+        box-shadow: rgba(0, 0, 0, .32) 0 8px 32px 0px  ;
     }
     .imagen_mono{
         display: block;
@@ -94,6 +100,37 @@
         padding: 13em 0 0 0;
     }
     
+    #contenidooculto{
+        visibility: hidden;
+        position: absolute;
+        width: 400px;
+        height: 944px;
+    }
+    #texto_a_Procesado{
+        border: none;
+        outline: none;
+        resize: none;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        color: #495057;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        margin: 72px 32px 0 32px;
+        vertical-align: top;
+        width: 336px;
+        height: 781px;
+    }
+    .boton_copiar{
+            display: block;
+            margin: 32px 32px 0 32px;
+            width: 336px;
+            height: 67px;
+            border-radius: 24px;
+            background: #FFFFFF;
+            color: #0A3871;
+
+         }
      .mensaje_estado{
         display: block;
         text-align: center;
@@ -115,17 +152,103 @@
         font-weight: 400;
 
      }
-   
-    .primer_bloque, .segundo_bloque, .tercer_bloque{
+
+
+     .primer_bloque, .segundo_bloque, .tercer_bloque, #contenidooculto{
         display: inline-block;
-    }
+     }
 
  /*responsive*/
-    @media screen and (max-width:480px){
-
-
+ @media screen and (max-width: 480px) {
+    html   {
+        width: 375px;
+        height: 993px;
+        
+        }
+    .primer_bloque{
+        height: 96px;
+    }
+    .cuadroTexto{
+        margin: 0px 0 0 0;
+        width: 100%;
+        text-align: center;
+        height: 35vh;
+    }
+    .boton_encriptar, .boton_desencriptar{
+        width: 328px;
+        padding: 1.2em 0 1.2em 0;
+        border-radius: 20px;
+        margin: 0 0 0 0;
     }
 
+    .boton_encriptar{
+        margin: 0 0 24px 0;
+    }
+    .boton_desencriptar{
+        background: #F3F5FC;
+    }
+    .tercer_bloque{
+        display: block;
+        height: 133px;
+    }
+    .imagen_mono{
+        display: none;
+    }
+    .primer_bloque, .segundo_bloque, .tercer_bloque, #contenidooculto{
+        display: block;
+        width: 327px;
+     }
+     .tercer_bloque{
+        padding: 16px 0 0 0;
+        height: 186px;
+     }
+     .mensaje_estado {
+        margin: 16px 32px 0 32px;
+        width: 263px;
+        height: 58px;
+
+     }
+     
+     .mensaje_estado2{
+        margin: 16px 32px 0 32px;
+        width: 263px;
+        height: 48px;
+     }
+
+      
+    #contenidooculto{
+        visibility: hidden;
+        width: 343px;
+        height: 595px;
+    }
+    #texto_a_Procesado{
+        border: none;
+        outline: none;
+        resize: none;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        color: #495057;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        margin: 72px 32px 0 32px;
+        vertical-align: top;
+        width: 279px;
+        height: 432px;
+    }
+    .boton_copiar{
+            display: block;
+            margin: 32px 32px 0 32px;
+            width: 336px;
+            height: 67px;
+            border-radius: 24px;
+            background: #FFFFFF;
+            color: #0A3871;
+
+         }
+
+
+ }
 /*
     .logo_superior{
         position: absolute;
