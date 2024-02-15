@@ -4,12 +4,11 @@
     <head>
         <title>Encriptador</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-widht">
-        <link rel="stylesheet" href="reset.css">
+        <meta name="viewport" content="width=device-width", initial-scale="1">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="primer_bloque">    
@@ -17,23 +16,32 @@
         </div>
 
         
-        <div class="segundo_bloque">
-            <textarea cols="10" rows="27" id="texto_a_encriptar" class="cuadroTexto" required placeholder="Ingrese el texto aqui"></textarea>
-            <img src="/imagenes/Frame 1.png" class="instrucciones">
+        <div class="segundo_bloque" id="imagenytexto">
+            <!--<input type="number" id="valorUsuario" min="1" max="10" class="container__input">-->
+            <!--<input autofocus id="texto_a_Procesar" minlength="10" maxlength="500  " required placeholder="Ingrese el texto aqui" height="800px" class="cuadroTexto">-->
+            <textarea cols="10" rows="19" id="texto_a_Procesar" class="cuadroTexto" required placeholder="Ingrese el texto aqui"></textarea>
+            <img src="/imagenes/Frame 1.png" alt="Instrucciones para llenar el campo" class="instrucciones" id="imagenmono">
             <div class="botones">
-                <button onclick="verificarIntento();" class="boton_encriptar">Encriptar</button>
-                <button onclick="reiniciarJuego();" class="boton_desencriptar" id="reiniciar" disabled>Desencriptar</button>
+                <button onclick="encriptar();" class="boton_encriptar" id="encriptar_click">Encriptar</button>
+                <button onclick="desencriptar();" class="boton_desencriptar" disabled>Desencriptar</button>
             </div>
         </div>
-        
-        <div class="tercer_bloque">
-            <img src="imagenes/Muñeco.png"  alt="Dibujo Niño con lupa" width="336" height="304" class="imagen_mono"></textarea>
-            <div class="mensaje_estado">
-                <label class="texto">Ningun mensaje fue encontrado</label>
+        <div id="contenidooculto">
+            <textarea cols="4" rows="19" id="texto_a_Procesado" class="cuadroTexto2" readonly></textarea>
+            <button onclick="copiar();" class="boton_copiar" id="copiar_click">Copiar</button>
+        </div>
+        <div class="tercer_bloque" id="bloqueresultados">
+           
+            <div id="imagenmasmensaje">
+                <img src="imagenes/Muñeco.png"  alt="Dibujo Niño con lupa" width="336" height="304" class="imagen_mono" id="imagenmono"></textarea>
+                <div class="mensaje_estado">
+                    <label class="texto">Ningun mensaje fue encontrado</label>
+                </div>
+                <div class="mensaje_estado2">
+                    <label class="texto2">Ingresa el texto que desees encriptar desencriptar</label>
+                </div>
             </div>
-            <div class="mensaje_estado2">
-                <label class="texto2">Ingresa el texto que desees encriptar desencriptar</label>
-            </div>
+            
         </div>      
         <script src="app.js"></script>
     </body>
