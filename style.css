@@ -13,27 +13,27 @@
         }
   
 /*primer bloque*/
-    .primer_bloque{
-        
-        width: 240px;
-        height: 100%;
+    .primer_bloque{   
         vertical-align: top;
-        margin: 40px 0 0 0;
+        width: 140px
+    
 
     }
-    
+    .logo_superior{
+        margin: 40px 0 0 0;
+    }    
 /*segundo bloque*/
     .segundo_bloque{
-        display: block;
-        width: 740px;
-        height: 100%;
+        vertical-align: top;
+        width: 860px;
 
     }
     .cuadroTexto{
-        margin: 5em 0 0 0 ;
-        word-wrap:break-word;
         display: block;
-        width: 90%;
+        position: relative;
+        height: 288px;
+        width: 680px;
+        margin: 168px 0 0 100px;
         font-size: 32px;
         resize: none;
         border-radius: 15px;
@@ -54,22 +54,25 @@
     }
 
     .instrucciones{
+        position: relative;
         display: block;
-        margin: 1opx 0 10px 0;
-        padding: 10px 0 10px 0;
+        width: 252px;
+        height: 18px;;
+        margin: 395px 0 16px 100px;
     }
     .botones{
-        width: 100%;
+        position: relative;
+        display: block;
+        margin: 0 0 0 100px;
     }
 
     .boton_encriptar, .boton_desencriptar{
         width: 328px;
-        padding: 1.2em 0 1.2em 0;
+        height: 67px;
         border-radius: 20px;
-        margin: 0 0 0 0;
         font-size: 16px;
         font-weight: 400;
-
+        margin: 0 0 74px 0;
     }
 
     .boton_encriptar{
@@ -78,83 +81,76 @@
     }
 
     .boton_desencriptar{
-        background: #CED4DA;
+        background: #F3F5FC;
         border-color: #072B61;
         color: #072B61;
-        margin: 0 0 0 20px;
+        margin: 0 0 0 24px;
     }
 
 /*tercer bloque*/
     .tercer_bloque{
         vertical-align: top;
         width: 400px;
-        height: 944px;
-        background-color: #FFFFFF;
-        border-radius: 20px;
-        margin: 40px 0 30px 0;
-        box-shadow: rgba(0, 0, 0, .32) 0 8px 32px 0px  ;
     }
-    .imagen_mono{
-        display: block;
-        margin: 0 27px 20px 27px;
-        padding: 13em 0 0 0;
-    }
-    
-    #contenidooculto{
-        visibility: hidden;
-        position: absolute;
-        width: 400px;
-        height: 944px;
-    }
-    #texto_a_Procesado{
-        border: none;
+    .cuadroTexto2{
+        margin: 40px 0 0 0;
+        border-width: 32px;
+        border-color: #FFFFFF;
         outline: none;
         resize: none;
+        border-radius: 32px;
+        box-shadow: rgba(0, 0, 0, .32) 0 0 32px 0px;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
         color: #495057;
         font-weight: 400;
         font-size: 24px;
         line-height: 36px;
-        margin: 72px 32px 0 32px;
-        vertical-align: top;
         width: 336px;
-        height: 781px;
+        height: 870px;
+        background-image: url("/imagenes/Muñeco.png");
+        background-position: center 211px;
+        background-repeat: no-repeat;
     }
+
     .boton_copiar{
+            visibility: hidden;
+            position: absolute;
             display: block;
-            margin: 32px 32px 0 32px;
             width: 336px;
             height: 67px;
             border-radius: 24px;
             background: #FFFFFF;
             color: #0A3871;
+            margin: 885px 0 0 32px;
 
          }
+    .mensaje_estado_global{
+        position: absolute;
+        margin: 619px 32px 0 32px;
+    }
      .mensaje_estado{
-        display: block;
+        
         text-align: center;
         width: 336px;
-        margin: 0 27px 0 27px;
         height: 58px;
+        margin: 0 0 16px 0;
         font-size: 24px;
         font-weight: 700;
       
      }
 
      .mensaje_estado2{
-        display: block;
         text-align: center;
         width: 336px;
-        margin: 0 27px 0 27px;
-        height: 24px;
+        height: 48px;
         font-size: 16px;
         font-weight: 400;
 
      }
 
 
-     .primer_bloque, .segundo_bloque, .tercer_bloque, #contenidooculto{
+     .primer_bloque, .segundo_bloque, .tercer_bloque{
         display: inline-block;
      }
 
@@ -162,94 +158,140 @@
  @media screen and (max-width: 480px) {
     html   {
         width: 375px;
-        height: 993px;
+        vertical-align: middle;
         
         }
     .primer_bloque{
+        display: block;
+        margin: none;
+        width: 375px;
         height: 96px;
     }
-    .cuadroTexto{
-        margin: 0px 0 0 0;
-        width: 100%;
-        text-align: center;
-        height: 35vh;
-    }
-    .boton_encriptar, .boton_desencriptar{
-        width: 328px;
-        padding: 1.2em 0 1.2em 0;
-        border-radius: 20px;
-        margin: 0 0 0 0;
-    }
+        .logo_superior{
+            position: relative;
+            margin: 24px 0 24px -32px;
+            height: 48px;
+        }
 
-    .boton_encriptar{
-        margin: 0 0 24px 0;
-    }
-    .boton_desencriptar{
-        background: #F3F5FC;
-    }
+        .cuadroTexto{
+            margin: 56px 0 0 0;
+            height: 251px;
+            width: 100%;
+            text-align: center;
+        }
+        .instrucciones{
+            margin: 0 0 0 10px;
+        }
+        .botones{
+            margin: 16px 0 0 0;
+            width: 100%;
+            height: 158px;
+        }
+        .boton_encriptar, .boton_desencriptar{
+            width: 328px;
+            border-radius: 20px;
+            margin: 0 0 0 0;
+        }
+
+        .boton_encriptar{
+            margin: 0 0 24px 0;
+            border: none;
+        }
+        .boton_desencriptar{
+            background: #F3F5FC;
+            border-color: #072B61;
+            outline: none;
+        }
+
     .tercer_bloque{
-        display: block;
-        height: 133px;
-    }
-    .imagen_mono{
-        display: none;
-    }
-    .primer_bloque, .segundo_bloque, .tercer_bloque, #contenidooculto{
-        display: block;
-        width: 327px;
-     }
-     .tercer_bloque{
-        padding: 16px 0 0 0;
+        padding: 0 0 0 0;
+        width: 100%;
         height: 186px;
-     }
-     .mensaje_estado {
-        margin: 16px 32px 0 32px;
-        width: 263px;
-        height: 58px;
-
-     }
-     
-     .mensaje_estado2{
-        margin: 16px 32px 0 32px;
-        width: 263px;
-        height: 48px;
-     }
-
-      
-    #contenidooculto{
-        visibility: hidden;
-        width: 343px;
-        height: 595px;
     }
-    #texto_a_Procesado{
-        border: none;
-        outline: none;
-        resize: none;
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        color: #495057;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 36px;
-        margin: 72px 32px 0 32px;
-        vertical-align: top;
-        width: 279px;
-        height: 432px;
-    }
-    .boton_copiar{
-            display: block;
-            margin: 32px 32px 0 32px;
-            width: 336px;
+        .boton_copiar{
+            visibility: hidden;
+            position: absolute;
+            
+            margin: 230px 0px 0 24px;
+            width: 279px;
             height: 67px;
             border-radius: 24px;
             background: #FFFFFF;
             color: #0A3871;
 
+            }
+        .cuadroTexto2{
+            width: 263px;
+            height: 186px;
+            border-width: 32px;
+            margin: 70px 0 0 0;
+            background: #ffffff;
+        }
+        
+        .mensaje_estado_global{
+            position: absolute;
+            margin: 114px 0 0 32px;
+            width: 327px;
+            height: 122px;
+        }
+        .mensaje_estado {
+            margin: 0 0 16px 0;
+            width: 263px;
+            height: 58px;
+
+        }
+        
+        .mensaje_estado2{
+            margin: 0 0 0 0;
+            width: 263px;
+            height: 48px;
+        }
+
+        
+       
+    .primer_bloque, .segundo_bloque, .tercer_bloque{
+            display: block;
+            width: 327px;
          }
 
 
  }
 /*
+ 
+        #texto_a_Procesado{
+            border: none;
+            border-radius: 32px;
+            outline: none;
+            resize: none;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            color: #495057;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            margin: 72px 32px 0 32px;
+            vertical-align: top;
+            width: 279px;
+            height: 432px;
+        }
+    
+ .tercer_bloque{
+       
+        position: absolute;
+        width: 400px;
+        height: 944px;
+        background-color: #FFFFFF;
+        border-radius: 32px;
+        margin: 40px 0 30px 0;
+        box-shadow: rgba(0, 0, 0, .32) 0 8px 32px 0px;
+    }
+
+   #contenidooculto{
+        visibility: hidden;
+        position: absolute;
+        width: 400px;
+        height: 944px;
+    }
     .logo_superior{
         position: absolute;
         padding: 10px 0 10px 10px;
