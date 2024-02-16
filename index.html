@@ -15,32 +15,27 @@
             <img src="imagenes/logo.png" width="120px" height="48px" alt="Logo del diseNador" class="logo_superior">
         </div>
 
-        
         <div class="segundo_bloque" id="imagenytexto">
-            <!--<input type="number" id="valorUsuario" min="1" max="10" class="container__input">-->
-            <!--<input autofocus id="texto_a_Procesar" minlength="10" maxlength="500  " required placeholder="Ingrese el texto aqui" height="800px" class="cuadroTexto">-->
-            <textarea cols="10" rows="19" id="texto_a_Procesar" class="cuadroTexto" required placeholder="Ingrese el texto aqui"></textarea>
-            <img src="/imagenes/Frame 1.png" alt="Instrucciones para llenar el campo" class="instrucciones" id="imagenmono">
-            <div class="botones">
-                <button onclick="encriptar();" class="boton_encriptar" id="encriptar_click">Encriptar</button>
-                <button onclick="desencriptar();" class="boton_desencriptar" disabled>Desencriptar</button>
-            </div>
+                <textarea rows="auto" cols="auto" id="texto_a_Procesar" class="cuadroTexto" required placeholder="Ingrese el texto aqui"></textarea>
+                <img src="/imagenes/Frame 1.png" alt="Instrucciones para llenar el campo" class="instrucciones" id="imagenmono">
+                <div class="botones">
+                    <button onclick="encriptar();" class="boton_encriptar" id="encriptar_click">Encriptar</button>
+                    <button onclick="desencriptar();" class="boton_desencriptar" disabled>Desencriptar</button>
+                </div>
         </div>
-        <div id="contenidooculto">
-            <textarea cols="4" rows="19" id="texto_a_Procesado" class="cuadroTexto2" readonly></textarea>
-            <button onclick="copiar();" class="boton_copiar" id="copiar_click">Copiar</button>
-        </div>
+        
         <div class="tercer_bloque" id="bloqueresultados">
-           
-            <div id="imagenmasmensaje">
-                <img src="imagenes/Muñeco.png"  alt="Dibujo Niño con lupa" width="336" height="304" class="imagen_mono" id="imagenmono"></textarea>
+            <button onclick="copiar();" class="boton_copiar" id="copiar_click">Copiar</button>
+            <div class="mensaje_estado_global" id="mensaje_global_id">
                 <div class="mensaje_estado">
                     <label class="texto">Ningun mensaje fue encontrado</label>
                 </div>
                 <div class="mensaje_estado2">
-                    <label class="texto2">Ingresa el texto que desees encriptar desencriptar</label>
+                    <label class="texto2">Ingresa el texto que desees o encriptar desencriptar.</label>
                 </div>
             </div>
+            <textarea cols="4" rows="19" id="texto_a_Procesado" class="cuadroTexto2" readonly></textarea>
+            
             
         </div>      
         <script src="app.js"></script>
