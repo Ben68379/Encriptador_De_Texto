@@ -4,36 +4,48 @@
     <head>
         <title>Encriptador</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-
-        <textarea rows="auto" cols="auto" id="texto_a_encriptar" class="cuadroTexto" required placeholder="Ingrese el texto aqui"></textarea>
+        <main>
+            <div class="logos">
+                <p style="font-size: 7vw; color: none; font-family: Aldo;">a</p>
+            </div>
+            
+            <textarea maxlength="330" class="cuadroTexto" rows="auto" cols="auto" id="texto_a_encriptar"  required placeholder="Ingrese el texto aqui"></textarea>
                     
-        <div class="instrucciones">
-            <img src="/imagenes/bi_exclamation-circle-fill.png">
-            <label>Solo letras minúsculas y sin acentos</label>
-        </div>
-                
-        <div class="botones_encriptar_desencriptar">
-            <button onclick="encriptar();" class="boton_encriptar" id="encriptar_click">Encriptar</button>
-            <button onclick="desencriptar();" class="boton_desencriptar">Desencriptar</button>
-        </div>
-
-        <div id="texto_bajoimagen">
-            <p class="cuadroTexto2">Ningun mensaje fue encontrado</p>
-            <p2 class="cuadroTexto3">Ingresa el texto que desees encriptar o desencriptar</p2>
-        </div>    
-        
-        <div class="cuadroTexto4_container">
-            <textarea class="cuadroTexto4" id="texto_encriptado" readonly></textarea>
-        </div>
-        <button onclick="copiar();" class="boton_copiar" id="copiar_click">Copiar</button>    
+            <div class="instrucciones">
+                <img src="/imagenes/bi_exclamation-circle-fill.png" style="width: .8vw; height: .8vw;" id="exclamacion"><label>Solo letras minúsculas y sin acentos</label>
+            </div>
                     
+            <div class="botones_encriptar_desencriptar">
+                <button onclick="encriptar();" class="boton_encriptar" id="encriptar_click">Encriptar</button>
+                <button onclick="desencriptar();" class="boton_desencriptar">Desencriptar</button>
+            </div>
+
+            <div class="cuadroTexto2" id="cuadro_Texto_Encriptado">
+
+                <p3 style="word-break: break-all;" id="texto_encriptado"></p3> 
+
+                <div id="texto_bajoimagen">
+
+                    <p id="cuadroTexto3">Ningun mensaje fue encontrado</p>
+                    <p2 id="cuadroTexto4">Ingresa el texto que desees encriptar o desencriptar</p2>
+
+                </div>
+                <button onclick="copiar();" class="boton_copiar" id="copiar_click">Copiar</button>
+
+            </div>
+            
+        </main>
+        <footer id="pie">
+            <p4 id="nombre">Benito Mendez</p4>
+        </footer>
         <script src="app.js"></script>
     </body>
 </html>
