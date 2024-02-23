@@ -10,9 +10,14 @@ button{
     box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
     border-radius: 1.5vw;
     font-size: 1vw;
+    gap: .5vw;
+    border-color: white;
 }
 .logos{
     position: absolute;
+}
+.logotipo{
+    height: 100%;
 }
 .cuadroTexto{
     position: absolute;
@@ -33,7 +38,9 @@ button{
 .cuadroTexto::placeholder{
     color: black;
     font-weight: 700;
-    text-shadow: 0px 34px 42px -8px #f0eaeaf0;
+    background-image: linear-gradient(45deg, black, transparent);
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
 }
 .instrucciones{
     position: absolute;
@@ -41,7 +48,6 @@ button{
 label{
     width: 300px;
 }
-
 .botones_encriptar_desencriptar{
     
     position: absolute;
@@ -60,6 +66,15 @@ label{
 }
 .boton_desencriptar{
     background: none;
+}
+.boton_encriptar:hover{
+    background: gainsboro;
+    transition: 1s;
+
+}
+.boton_desencriptar:hover{
+    background:#FDE08D;
+    transition: 1s;
 }
 .cuadroTexto2{
     position: absolute;
@@ -101,11 +116,12 @@ label{
 .boton_copiar{
     position: absolute;
     display: none;
-    padding: 24px;
-    border-radius: 24px;
-    gap: 8px;
     border-color: white;
     background: none;
+}
+.boton_copiar:hover{
+    background:#FDE08D;
+    transition: 1s;
 }
 #pie{
     display: flex;
@@ -154,6 +170,7 @@ label{
         width: 47.77%;
         height: 100%;
     }
+
     .cuadroTexto2{
         width: 23.33%;
         height: 85.93%;
@@ -187,8 +204,11 @@ label{
         padding: 1.5vw;
         gap: .5vw;
     }
+    #nombre{
+        font-size: 1vw;
+    }
 }
-@media screen and (min-width: 376px) and (max-width: 1400px){
+@media screen and (min-width: 481px) and (max-width: 1400px){
     
     .logos{
         width: 4.04%;
@@ -274,7 +294,9 @@ label{
         left: 1.7vw;
 
     }
-
+    #nombre{
+        font-size: 2vw;
+    }
     @media screen and (min-aspect-ratio: 4/3) {
         button{
             font-size: 1vw;
@@ -285,6 +307,10 @@ label{
             top: 3.90%;
             left: 3.90%;
             gap: 3.90%;
+        }
+        
+        .logotipo{
+            height: 100%;
         }
         .cuadroTexto{
             font-size: 2.5vw;
@@ -344,9 +370,18 @@ label{
         #texto_bajoimagen{
             width: 90%;
             height: 11.91%;
-            top: 53.41%;
+            top: 59.41%;
             left: 7%;
             gap: 1vw;
+        }
+        #cuadroTexto3{
+            font-size: 2vw;
+        }
+        #cuadroTexto4{
+            font-size: 1vw;
+        }
+        #texto_encriptado{
+            word-break: break-all;
         }
         .boton_copiar{
             display: none;
@@ -358,15 +393,21 @@ label{
             gap: .5vw;
             font-size: 1vw;
         }
+        #nombre{
+            font-size: 1.5vw;
+        }
     }
 }
-@media screen and (max-width: 375px){   
+@media screen and (max-width: 480px){   
         .logos{
                 width: 20%;
                 height: 5.14%;
                 top: 2vw;
                 left: 1.5vw;
             }
+        .logotipo{
+            height: 100%;
+        }
             .cuadroTexto{
                 width: 91.46%;
                 line-height: 7vw;
@@ -444,6 +485,9 @@ label{
                 gap: 1vw;
                 font-size: 6vw;
         
+            }
+            #nombre{
+                font-size: 2vw;
             }
 }
 
