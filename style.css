@@ -1,505 +1,449 @@
-/*formato de la pagina completa*/
-    html   {
-        margin: 0 auto;
-        background: #F3F5FC;
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-variation-settings:"slnt" 0;
-        
-        }
-/*primera seccion*/
+html{
+    background: -webkit-linear-gradient(left, #8f6B29, #FDE08D, #DF9F28);
+    padding:5px 0 0;
+    
+}
+main{
+    display: flex;
+}
+button{
+    box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
+    border-radius: 1.5vw;
+    font-size: 1vw;
+}
+.logos{
+    position: absolute;
+}
+.cuadroTexto{
+    position: absolute;
 
+    font-family: Inter;
+    font-size: 2.5vw;
+    font-weight: 400;
+    line-height: 3vw;
+    letter-spacing: 0em;
+    text-align: left;
+
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+
+}
+.cuadroTexto::placeholder{
+    color: black;
+    font-weight: 700;
+    text-shadow: 0px 34px 42px -8px #f0eaeaf0;
+}
+.instrucciones{
+    position: absolute;
+}
+label{
+    width: 300px;
+}
+
+.botones_encriptar_desencriptar{
+    
+    position: absolute;
+    display: grid;
+
+}
+.boton_encriptar, .boton_desencriptar{
+    
+    display: block;
+    padding: 1.5vw;
+    gap: 8px;
+
+}
+.boton_encriptar{
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.boton_desencriptar{
+    background: none;
+}
+.cuadroTexto2{
+    position: absolute;
+
+    padding: 1.7vw;
+    border-radius: 1.7vw;
+    gap: 1.7vw;
+    box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
+}
+#texto_encriptado{
+    font-family: Inter;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 2vw;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+#texto_bajoimagen{
+    display: grid;
+    position: absolute;
+}
+#cuadroTexto3{
+    font-family: Inter;
+    font-size: 2vw;
+    font-weight: 700;
+    line-height: 2vw;
+    letter-spacing: 0em;
+    text-align: center;
+}
+#cuadroTexto4{
+    font-family: Inter;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 1.5vw;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.boton_copiar{
+    position: absolute;
+    display: none;
+    padding: 24px;
+    border-radius: 24px;
+    gap: 8px;
+    border-color: white;
+    background: none;
+}
+#pie{
+    display: flex;
+    position: absolute;
+    top: 97%;
+    left: 90%;
+}
+#nombre{
+    font-size: 1vw;
+}
+@media screen and (min-width: 1401px) {
     .logos{
-        position: absolute;
-        display: flex;
-        width: 120px;
-        height: 48px;
-        top: 40px;
-        left: 40px;
-        gap: 40px;
-
-        }
-    .cuadroTexto::placeholder{
-        font-family: Inter;
-        color: #0A3871;
-        }
+        width: 8.33%;
+        height: 4.68%;
+        top: 3.90%;
+        left: 3.90%;
+        gap: 3.90%;
+    }
     .cuadroTexto{
-        position: absolute;
-        display: flex;
-
-        font-family: Inter;
-        text-align: left;
-        color: #0A3871;
-
-        border: none;
-        outline: none;
-        background: none;
-        resize: none;
-
+        font-size: 2.5vw;
+        width: 47.22%;
+        height: 64.45%;
+        top: 16.40%;
+        left: 16.66%;
+    }
+    .cuadroTexto::placeholder{
+        font-size: 2.5vw;
     }
     .instrucciones{
-        position: absolute;
-        display: flex;
-
-        font-family: Inter;
-        text-align: left;
+        font-size: 1vw;
+        width: 17.5%;
+        height: 1.75%;
+        top: 83.10%;
+        left: 16.66%;
+        gap: 8px;
     }
     .botones_encriptar_desencriptar{
-        position: absolute;
         display: flex;
+        width: 47.22%;
+        height: 6.54%;
+        top: 86.42%;
+        left: 16.66%;
+        gap: 1.5vw;
     }
-    .boton_encriptar{
-        position: relative;
-        display: flex;
-    
-        font-family: Inter;
-        text-align: center;
-        color: white;
-        background: #0A3871;
-    }
-    .boton_desencriptar{
-        position:relative;
-        display: flex;
-        color: #0A3871;
-
-        border-color: #0A3871;
-        background: none;
-    }  
-
-  
-/*segunda seccion*/
-    
-    .cuadroTexto4_container{
-        position: relative;
-        display: flex;
-        
-        font-family: Inter;
-        color: #495057;
-        box-shadow: 0px 24px 32px -8px #00000014;
-
-        
-        }
-    .cuadroTexto4{
-        width: 100%;
+    .boton_encriptar, .boton_desencriptar{
+        width: 47.77%;
         height: 100%;
-
-        border: none;
-        border-color: white;
-        border-radius: 32px;
-        outline: none;
-        resize: none;
-        text-align: left;
-        padding: 32px;
-    }
-    #texto_bajoimagen{
-        position: absolute;
-        display: fixed;
     }
     .cuadroTexto2{
-        position: absolute;
-        display: flex;
-        font-family: Inter;
-        text-align: center;
+        width: 23.33%;
+        height: 85.93%;
+        top: 3.90%;
+        left: 71.66%;
+        background-image: url("/imagenes/Muñeco.png");
+        background-size: 22vw;
+        background-repeat: no-repeat;
+        background-position: center 30%;
+    }
+    #texto_encriptado{
+        width: 23.33%;
+        height: 54.23%;
+        top: 7.03%;
+        left: 71.66%;
 
-        }
-    .cuadroTexto3{
-        position: absolute;
-        display: flex;
-        font-family: Inter;
-        text-align: center;
+    }
+    #texto_bajoimagen{
+        width: 90%;
+        height: 11.91%;
+        top: 53.41%;
+        left: 7%;
+        gap: 1vw;
     }
     .boton_copiar{
-        visibility: hidden;
-        position: absolute;
-        display: flex;
-        border-radius: 24px;
-
-        font-family: Inter;;
-        text-align: center;
-
-        background: none;
-        border-color: #0A3871;
-
-    }   
-    
-/*responsive*/
-    @media screen and (min-width: 900px) {
-        .html{
-            width: 1440px;
-            height: 1024px;
-        }
-        .cuadroTexto::before{
-            position: relative;
-            content: url(/imagenes/logo.png);
-            display: block;
-            width: 1em;
-            height: 48px;
-            top: 40px;
-            left: 40px;
-            gap: 40px;
-
-        }
-        .cuadroTexto::placeholder{
-            font-size: 32px;
-            font-weight: 400;
-            line-height: 48px;
-            letter-spacing: 0em;
-            text-align: left;
-            }
-        .cuadroTexto{
-            width: 680px;
-            height: 288px;
-            top: 168px;
-            left: 240px;
-
-            font-size: 32px;
-            font-weight: 400;
-            line-height: 48px;
-            letter-spacing: 0em;
-        }
-        .instrucciones{
-            width: 229px;
-            height: 18px;
-            top: 851px;
-            left: 240px;
-            gap: 8px;
-
-
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 18px;
-            letter-spacing: 0em;
-        }
-        .botones_encriptar_desencriptar{
-            width: 680px;
-            height: 67px;
-            top: 895px;
-            left: 240px;
-            gap: 24px;
-        }
-        .boton_encriptar{
-            width: 328px;
-            height: 67px;
-            padding: 24px 0 0 126px;
-            border-radius: 24px;
-            gap: 8px;
-    
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 19px;
-            letter-spacing: 0em;
-        }
-        .boton_desencriptar{
-            width: 328px;
-            height: 67px;
-            padding: 24px 0 0 126px;
-            border-radius: 24px;
-            gap: 8px;
-        }
-        .cuadroTexto4_container{
-            width:400px;
-            height: 944px;
-            top: 40px;
-            left: 1000px;
-        }
-        .cuadroTexto4{
-            background-image: url("/imagenes/Muñeco.png");
-            background-position: center 211px;
-            background-repeat: no-repeat;
-            
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 36px;
-            letter-spacing: 0em;
-        }
-        #texto_bajoimagen{
-            width: 336px;
-            height: 122px;
-            top: 619px;
-            left: 1032px;
-            gap: 16px;
-
-        }
-        .cuadroTexto2{
-            width: 100%;
-
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 29px;
-            letter-spacing: 0em;
-            }
-        .cuadroTexto3{
-            width: 100%;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0em;
-        }
-        .boton_copiar{
-            width: 336px;
-            height: 67px;
-            top: 885px;
-            left: 1032px;
-            padding: 24px;
-            border-radius: 24px;
-            gap: 8px;
-
-
-        }  
-    
-        }
-
-
-    @media screen and (max-width: 768px) {
-        .html{
-            width: 768px;
-            height: 1174px;
-        }
-        .cuadroTexto::before{
-            position: relative;
-            content: url(/imagenes/logo.png);
-            display: block;
-            width: 1em;
-            height: 48px;
-            top: 40px;
-            left: 40px;
-            gap: 40px;
-
-        }
-        .cuadroTexto::placeholder{
-            font-size: 32px;
-            font-weight: 400;
-            line-height: 48px;
-            letter-spacing: 0em;
-            text-align: left;
-            }
-        .cuadroTexto{
-            width: 688px;
-            height: 288px;
-            top: 240px;
-            left: 40px;
-            
-            font-size: 32px;
-            font-weight: 400;
-            line-height: 48px;
-            letter-spacing: 0em;
-        }
-        .instrucciones{
-            width: 229px;
-            height: 18px;
-            top: 836px;
-            left: 40px;
-            gap: 8px;
-
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 18px;
-            letter-spacing: 0em;
-
-        }
-        .botones_encriptar_desencriptar{
-            width: 688px;
-            height: 67px;
-            top: 870px;
-            left: 40px;
-            gap: 24px;
-
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 19.36px;
-            letter-spacing: 0em;
-
-        }
-        .boton_encriptar{
-            width: 332px;
-            height: 67px;
-            padding: 24px 0 0 126px;
-            border-radius: 24px;
-            gap: 8px;
-    
-        }
-        .boton_desencriptar{
-            width: 332px;
-            height: 67px;
-            padding: 24px 0 0 126px;
-            border-radius: 24px;
-            gap: 8px;
-        }
-        .cuadroTexto4_container{
-            width: 688px;
-            height: 133px;
-            top: 1001px;
-            left: 40px;
-            border-radius: 32px;
-            gap: 32px;
-
-        }
-        .cuadroTexto4{
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 36px;
-            letter-spacing: 0em;
-        }
-        #texto_bajoimagen{
-            width: 624px;
-            height: 69px;
-            gap: 16px;
-            top: 1100px;
-
-
-        }
-        .cuadroTexto2{
-            width: 100%;
-
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 29px;
-            letter-spacing: 0em;
-            }
-        .cuadroTexto3{
-            width: 100%;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0em;
-        }
-        .boton_copiar{
-            width: 624px;
-            height: 67px;
-            padding: 24px;
-            border-radius: 24px;
-            gap: 8px;
-            top: 1200px;
-
-
-
-        }
-        }
-    
-    @media screen and (max-width: 480px) {
-        html{
-            width: 375px;
-            height: 1715px;
-        }
-        .cuadroTexto::before{
-            position: relative;
-            content: url(/imagenes/logo.png);
-            display: block;
-            width: 1em;
-            height: 48px;
-            top: 40px;
-            left: 40px;
-            gap: 40px;
-
-        }
-        .cuadroTexto::placeholder{
-            font-size: 32px;
-            font-weight: 400;
-            line-height: 48px;
-            letter-spacing: 0em;
-            text-align: left;
-            }
-        .cuadroTexto{
-            width: 688px;
-            height: 288px;
-            top: 240px;
-            left: 40px;
-            
-            font-size: 32px;
-            font-weight: 400;
-            line-height: 48px;
-            letter-spacing: 0em;
-        }
-        .instrucciones{
-            width: 229px;
-            height: 18px;
-            top: 836px;
-            left: 40px;
-            gap: 8px;
-
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 18px;
-            letter-spacing: 0em;
-
-        }
-        .botones_encriptar_desencriptar{
-            width: 688px;
-            height: 67px;
-            top: 870px;
-            left: 40px;
-            gap: 24px;
-
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 19.36px;
-            letter-spacing: 0em;
-
-        }
-        .boton_encriptar{
-            width: 332px;
-            height: 67px;
-            padding: 24px 0 0 126px;
-            border-radius: 24px;
-            gap: 8px;
-    
-        }
-        .boton_desencriptar{
-            width: 332px;
-            height: 67px;
-            padding: 24px 0 0 126px;
-            border-radius: 24px;
-            gap: 8px;
-        }
-        .cuadroTexto4_container{
-            width: 688px;
-            height: 133px;
-            top: 1001px;
-            left: 40px;
-            border-radius: 32px;
-            gap: 32px;
-
-        }
-        .cuadroTexto4{
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 36px;
-            letter-spacing: 0em;
-        }
-        #texto_bajoimagen{
-            width: 624px;
-            height: 69px;
-            gap: 16px;
-            top: 1100px;
-
-
-        }
-        .cuadroTexto2{
-            width: 100%;
-
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 29px;
-            letter-spacing: 0em;
-            }
-        .cuadroTexto3{
-            width: 100%;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0em;
-        }
-        .boton_copiar{
-            width: 624px;
-            height: 67px;
-            padding: 24px;
-            border-radius: 24px;
-            gap: 8px;
-            top: 1200px;
-
-
-
-        }
-        
+        display: none;
+        width: 84%;
+        height: 7.61%;
+        bottom: 1.7vw;
+        left: 1.7w;
+        padding: 1.5vw;
+        gap: .5vw;
+    }
 }
+@media screen and (min-width: 376px) and (max-width: 1400px){
+    
+    .logos{
+        width: 4.04%;
+        height: 4.30%;
+        top: 6.25%;
+        left: 5.20%; 
+    }
+    .cuadroTexto{
+        line-height: 4vw;
+        font-size: 5vw;
+        width: 89.58%;
+        height: 48.55%;
+        top: 20.44%;
+        left: 5.20%;
+    }
+    .instrucciones{
+        width: 29.81%;
+        height: 1.53%;
+        top: 71.20%;
+        left: 5.20%;
+        gap: .5vw;
+
+    }
+    .botones_encriptar_desencriptar{
+        display: flex;
+        width: 89.58%;
+        height: 5.70%;
+        top: 74.10%;
+        left: 5.20%;
+        gap: 1.5vw;
+
+    }
+    .boton_encriptar, .boton_desencriptar{
+        width: 48.25%;
+        height: 100%;
+        padding: 1.5vw;
+        border-radius: 2.5vw;
+        gap: .5vw;
+        font-size: 2vw;
+
+    }
+    .boton_encriptar{
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    }
+    .boton_desencriptar{
+    background: none;
+    }
+    .cuadroTexto2{
+        width: 89.58%;
+        height: auto;
+        top: 85.26%;
+        left: 5.20%;
+        padding: 2vw 2vw 16vw 2vw;
+        margin: 0 0 2vw 0;
+    }
+    #texto_bajoimagen{
+        width: 90.69%;
+        height: 51.87%;
+    }
+    #cuadroTexto3{
+        font-size: 3vw;
+        width: 90.69%;
+        height: 21.80%;
+    }
+    #cuadroTexto4{
+        font-size: 2vw;
+        width: 90.69%;
+        height: 18.04%;
+    }
+    #texto_encriptado{
+        font-size: 2vw;
+        line-height: 4vw;
+        font-size: 3vw;
+    }
+    .boton_copiar{
+        font-size: 2vw;
+        width: 90.69%;
+        height: 64px;
+        padding: 1.5vw;
+        border-radius: 1.5vw;
+        gap: .5vw;
+        bottom: 1.7vw;
+        left: 1.7vw;
+
+    }
+
+    @media screen and (min-aspect-ratio: 4/3) {
+        button{
+            font-size: 1vw;
+        }
+        .logos{
+            width: 8.33%;
+            height: 4.68%;
+            top: 3.90%;
+            left: 3.90%;
+            gap: 3.90%;
+        }
+        .cuadroTexto{
+            font-size: 2.5vw;
+            width: 47.22%;
+            height: 64.45%;
+            top: 16.40%;
+            left: 16.66%;
+        }
+        .cuadroTexto::placeholder{
+            font-size: 2.5vw;
+        }
+        .instrucciones{
+            font-size: 1vw;
+            width: 17.5%;
+            height: 1.75%;
+            top: 83.10%;
+            left: 16.66%;
+            gap: 8px;
+        }
+        .botones_encriptar_desencriptar{
+            display: flex;
+            width: 47.22%;
+            height: 6.54%;
+            top: 86.42%;
+            left: 16.66%;
+            gap: 1.5vw;
+    
+        }
+        .boton_encriptar, .boton_desencriptar{
+            width: 47.77%;
+            height: 100%;
+            font-size: 1vw;
+        }
+        .cuadroTexto2{
+            width: 23.33%;
+            height: 91.93%;
+            top: 3.90%;
+            left: 71.66%;
+            padding: 0 0 0 0;
+            background-image: url("/imagenes/Muñeco.png");
+            background-size: 22vw;
+            background-repeat: no-repeat;
+            background-position: center 30%;
+        }
+        #texto_encriptado{
+            display: flex;
+            position: absolute;
+            left: 3%;
+            width: 77.33%;
+            height: 54.23%;
+            top: 7.03%;
+            left: 13.66%;
+            font-size: 1.4vw;
+            line-height: 2vw;
+    
+        }
+        #texto_bajoimagen{
+            width: 90%;
+            height: 11.91%;
+            top: 53.41%;
+            left: 7%;
+            gap: 1vw;
+        }
+        .boton_copiar{
+            display: none;
+            width: 84%;
+            height: 7.61%;
+            bottom: 1.7vw;
+            left: 1.7w;
+            padding: 1.5vw;
+            gap: .5vw;
+            font-size: 1vw;
+        }
+    }
+}
+@media screen and (max-width: 375px){   
+        .logos{
+                width: 20%;
+                height: 5.14%;
+                top: 2vw;
+                left: 1.5vw;
+            }
+            .cuadroTexto{
+                width: 91.46%;
+                line-height: 7vw;
+                height: 30.86%;
+                top: 16.29%;
+                left: 4.26%;
+                font-size: 6vw;
+        
+            }
+            .instrucciones{
+                width: 61.06%;
+                height: 1.92%;
+                top: 48.33%;
+                left: 4.26%;
+                gap: .7vw;
+                font-size: 4vw;
+            }
+        
+            .botones_encriptar_desencriptar{
+                width: 91.46%;
+                height: 16.93%;
+                top: 51.98%;
+                left: 4.26%;
+                gap: .5vw;
+        
+            }
+            .boton_encriptar, .boton_desencriptar{
+                width: 100%;
+                font-size: 5vw;
+                height: 90%;
+                border-radius: 7vw;
+        
+            }
+            .boton_desencriptar{
+                background: none;
+            }
+            .cuadroTexto2{
+                position: absolute;
+        
+                width: 86.13%;
+                height: auto;
+                top: 72.34%;
+                left: 4.5vw;
+                padding: 1.7vw 1.7vw 50vw 1.7vw;
+                border-radius: 32px;
+                gap: 32px;
+                box-shadow: 0px 1.5vw 2vw -.5vw #00000014;
+            }
+            #texto_encriptado{
+                font-size: 4vw;
+            }
+            #cuadroTexto3{
+                font-family: Inter;
+                font-size: 7vw;
+                font-weight: 700;
+                line-height: 6vw;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+            #cuadroTexto4{
+                font-family: Inter;
+                font-size: 4vw;
+                font-weight: 400;
+                line-height: 6vw;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+            .boton_copiar{
+                width: 98.34%;
+                height: 23%;
+                bottom: 2%;
+                left: 2vw;
+                border-color: white;
+                padding: 0 0 0 0;
+                gap: 1vw;
+                font-size: 6vw;
+        
+            }
+}
+
