@@ -1,5 +1,8 @@
 
+let texto_Resultado = document.getElementById('texto_encriptado');
+
 function encriptar(){
+  texto_Resultado.innerHTML = '';
   mostarContenido();
   
   let texto = texto_a_encriptar.value;
@@ -7,20 +10,19 @@ function encriptar(){
   for( i = 0; i < texto.length; i = i + 1){
     let j = i + 1;
     let v = (texto.substring(i,j)).charCodeAt(0) + 98;
-    texto_encriptado.value = texto_encriptado.value + String.fromCharCode(v);
+    texto_Resultado.innerHTML = texto_Resultado.innerHTML + String.fromCharCode(v);
   }
-  console.log(texto_encriptado.value);
   limpiarCaja();
   
   }
 
 function desencriptar(){
   let texto = document.getElementById('texto_a_encriptar').value
-  texto_encriptado.value = '';
+  texto_Resultado.innerHTML = '';
   for( i = 0; i < texto.length; i = i + 1){
     let j = i + 1;
     let v = (texto.substring(i,j)).charCodeAt(0) - 98;
-    texto_encriptado.value = texto_encriptado.value + String.fromCharCode(v);
+    texto_Resultado.innerHTML = texto_Resultado.innerHTML + String.fromCharCode(v);
   }
     mostarContenido();
     limpiarCaja();
@@ -28,39 +30,21 @@ function desencriptar(){
 }
 
 function copiar(){
-  navigator.clipboard.writeText(texto_encriptado.value);
-  alert("Mensaje copiado");
-  location.reload();
-}
 
+  navigator.clipboard.writeText(texto_Resultado.innerHTML);
+  alert("Mensaje copiado");
+  //location.reload();
+  texto_Resultado.innerHTML = '';
+  copiar_click.style = 'display: none;';
+  cuadro_Texto_Encriptado.style = 'background-image: url("/imagenes/Muñeco.png");';
+  texto_bajoimagen.style = 'display: grid;';
+}
+function mostarContenido(){
+  cuadro_Texto_Encriptado.style = 'background-image: none;';
+  texto_bajoimagen.style = 'display: none';
+  copiar_click.style = 'display: grid';
+}
 function limpiarCaja() {
     texto_a_encriptar.value = '';
 
 }
-function mostarContenido(){
-  texto_encriptado.style = "background-image: none;";
-  copiar_click.style = 'visibility: visible;';
-  texto_bajoimagen.style = 'visibility: hidden;';
-}
-function ocultarContenido(){
-  texto_encriptado.style = "background-image: url('/imagenes/Muñeco.png');";
-  copiar_click.style = 'visibility: hidden;';
-  texto_bajoimagen.style = 'visibility: visible;';
-}
-
-/*function redimensionar_caja(){
-  if (window.matchMedia("(max-width: 768px)").matches = true){
-    texto_encriptado.style = "height: 180px;";
-  }else{
-    texto_encriptado.style = "height: 781px;";
-  }
-  if (window.matchMedia("(max-width: 375px)").matches = true){
-    texto_encriptado.style = "height: 432px;";
-    }else{
-      texto_encriptado.style = "height: 781px;"
-    }
-}*/
-function condicionesIniciales(){
-  ocultarContenido();
-}
-//window.onresize = redimensionar_caja;
