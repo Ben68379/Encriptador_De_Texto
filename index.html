@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="es" style="background: -webkit-linear-gradient(left, #8f6B29, #FDE08D, #DF9F28); padding:5px 0 0; font-family: Inter;">
     <head>
         <title>Encriptador</title>
         <meta charset="UTF-8">
@@ -13,38 +13,66 @@
     </head>
     <body>
         <main>
-            <div class="logos">
-                <img class="logotipo" src="/imagenes/logo.png">
+<!--logo--> <div class="logos" style="position: absolute;">
+                <img class="logotipo" src="/imagenes/logo.png" alt="Logo alura" style="height: 100%;">
             </div>
-            
-            <textarea maxlength="330" class="cuadroTexto" rows="auto" cols="auto" id="texto_a_encriptar"  required placeholder="Ingrese el texto aqui"></textarea>
-                    
-            <div class="instrucciones">
-                <img src= "/imagenes/bi_exclamation-circle-fill.png" style="width: .8vw; height: .8vw;" id="exclamacion"><label>Solo letras minúsculas y sin acentos</label>
+<!--cuadro entrada de texto a encriptar-->        
+            <textarea maxlength="330" class="cuadroTexto" rows="auto" cols="auto" id="texto_a_encriptar"  required placeholder="Ingrese el texto aqui" style="position: absolute; border: none; outline: none; resize: none; background: none; font-family: Inter;"></textarea>
+<!--instrucciones debajo del cuadro de texto-->                    
+            <div class="instrucciones" style="position: absolute;">
+                <img src= "/imagenes/bi_exclamation-circle-fill.png" style="width: .8vw; height: .8vw;" id="exclamacion"><label style="width: 100%;">Solo letras minúsculas y sin acentos</label>
             </div>
-                    
-            <div class="botones_encriptar_desencriptar">
-                <button onclick="encriptar();" class="boton_encriptar" id="encriptar_click">Encriptar</button>
-                <button onclick="desencriptar();" class="boton_desencriptar">Desencriptar</button>
+<!--bloque botones de encriptar, desencriptar-->                    
+            <div class="botones_encriptar_desencriptar" style="position: absolute;">
+                <button onclick="encriptar();" class="boton_encriptar" id="encriptar_click" style="padding: 1.5vw; gap: .5vw; ">Encriptar</button>
+                <button onclick="desencriptar();" class="boton_desencriptar" style="padding: 1.5vw; gap: .5vw;" >Desencriptar</button>
             </div>
+<!--cuadro de texto derecho desencriptado-->
+        <!--Desktop-->
+            <div class="cuadroTexto2" id="cuadro_Texto_Encriptado" style="position: absolute;">
 
-            <div class="cuadroTexto2" id="cuadro_Texto_Encriptado">
+                <textarea id="texto_encriptado" readonly style="resize: none; background: none; width: 100%; height: 80%; outline: none; border: none;"></textarea>
 
-                <p3 style="word-break: break-all;" id="texto_encriptado"></p3> 
-
-                <div id="texto_bajoimagen">
-
-                    <p id="cuadroTexto3">Ningun mensaje fue encontrado</p>
-                    <p2 id="cuadroTexto4">Ingresa el texto que desees encriptar o desencriptar</p2>
-
+                <div id="texto_bajoimagen" style="display: grid; position: absolute;">
+                    <p id="cuadroTexto3" style="text-align: center; font-weight: 700; letter-spacing: 0em;">Ningun mensaje fue encontrado</p>
+                    <p2 id="cuadroTexto4" style="text-align: center; font-weight: 400; letter-spacing: 0em;">Ingresa el texto que desees encriptar o desencriptar</p2>
                 </div>
-                <button onclick="copiar();" class="boton_copiar" id="copiar_click">Copiar</button>
+
+                <button onclick="copiar();" class="boton_copiar" id="copiar_click" style="position: absolute; display: none;">Copiar</button>
+            </div>
+        
+        <!--Tablet-->
+            <div class="cuadroTexto2_tablet" id="cuadro_Texto_Encriptado_tablet" style="position: absolute;">
+
+                <textarea id="texto_encriptado_tablet" readonly style="resize: none; background: none; width: 100%; height: 80%; outline: none; border: none; font-size: 3vw;"></textarea>
+
+                <div id="texto_bajoimagen_tablet" style="display: grid; position: absolute;">
+                    <p id="cuadroTexto3" style="text-align: center; font-weight: 700; letter-spacing: 0em;">Ningun mensaje fue encontrado</p>
+                    <p2 id="cuadroTexto4" style="text-align: center; font-weight: 400; letter-spacing: 0em;">Ingresa el texto que desees encriptar o desencriptar</p2>
+                </div>
+
+                    <button onclick="copiar();" class="boton_copiar" id="copiar_click_tablet" style="position: absolute; display: none;">Copiar</button>
 
             </div>
-            
+        <!--Celular-->
+            <div class="cuadroTexto2_celular" id="cuadro_Texto_Encriptado_celular" style="position: absolute;">
+
+                <textarea id="texto_encriptado_celular" readonly style="resize: none; background: none; width: 100%; height: 80%; outline: none; border: none; font-size: 4vw;"></textarea>
+
+                <div id="texto_bajoimagen_celular" style="display: grid; position: absolute; top: 6vw;">
+                    <p id="cuadroTexto3" style="text-align: center; font-weight: 700; letter-spacing: 0em;">Ningun mensaje fue encontrado</p>
+                    <p2 id="cuadroTexto4" style="text-align: center; font-weight: 400; letter-spacing: 0em;">Ingresa el texto que desees encriptar o desencriptar</p2>
+                </div>
+
+                <button onclick="copiar();" class="boton_copiar" id="copiar_click_celular" style="position: absolute; display: none;">Copiar</button>
+            </div>
+
         </main>
-        <footer id="pie">
+<!--pie de pagina con nombre-->
+        <footer id="pie" style="display: grid;
+        position: absolute; font-family: Inter; align-content:end;">
             <p4 id="nombre">Benito Mendez</p4>
+            <p5 id="version">Version 1.0</p5>
         </footer>
         <script src="app.js"></script>
     </body>

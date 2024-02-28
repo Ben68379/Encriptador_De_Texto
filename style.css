@@ -1,11 +1,3 @@
-html{
-    background: -webkit-linear-gradient(left, #8f6B29, #FDE08D, #DF9F28);
-    padding:5px 0 0;
-    
-}
-main{
-    display: flex;
-}
 button{
     box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
     border-radius: 1.5vw;
@@ -13,53 +5,13 @@ button{
     gap: .5vw;
     border-color: white;
 }
-.logos{
-    position: absolute;
-}
-.logotipo{
-    height: 100%;
-}
-.cuadroTexto{
-    position: absolute;
-
-    font-family: Inter;
-    font-size: 2.5vw;
-    font-weight: 400;
-    line-height: 3vw;
-    letter-spacing: 0em;
-    text-align: left;
-
-    border: none;
-    outline: none;
-    resize: none;
-    background: none;
-
-}
 .cuadroTexto::placeholder{
     color: black;
+    font-family: Inter;
     font-weight: 700;
     background-image: linear-gradient(45deg, black, transparent);
     background-clip: text;
     -webkit-text-fill-color:transparent;
-}
-.instrucciones{
-    position: absolute;
-}
-label{
-    width: 300px;
-}
-.botones_encriptar_desencriptar{
-    
-    position: absolute;
-    display: grid;
-
-}
-.boton_encriptar, .boton_desencriptar{
-    
-    display: block;
-    padding: 1.5vw;
-    gap: 8px;
-
 }
 .boton_encriptar{
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
@@ -76,66 +28,17 @@ label{
     background:#FDE08D;
     transition: 1s;
 }
-.cuadroTexto2{
-    position: absolute;
-
-    padding: 1.7vw;
-    border-radius: 1.7vw;
-    gap: 1.7vw;
-    box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
-}
-#texto_encriptado{
-    font-family: Inter;
-    font-size: 1.5vw;
-    font-weight: 400;
-    line-height: 2vw;
-    letter-spacing: 0em;
-    text-align: left;
-
-}
-#texto_bajoimagen{
-    display: grid;
-    position: absolute;
-}
-#cuadroTexto3{
-    font-family: Inter;
-    font-size: 2vw;
-    font-weight: 700;
-    line-height: 2vw;
-    letter-spacing: 0em;
-    text-align: center;
-}
-#cuadroTexto4{
-    font-family: Inter;
-    font-size: 1vw;
-    font-weight: 400;
-    line-height: 1.5vw;
-    letter-spacing: 0em;
-    text-align: center;
-}
-.boton_copiar{
-    position: absolute;
-    display: none;
-    border-color: white;
-    background: none;
-}
 .boton_copiar:hover{
     background:#FDE08D;
     transition: 1s;
 }
-#pie{
-    display: flex;
-    position: absolute;
-    top: 97%;
-    left: 90%;
-}
-#nombre{
-    font-size: 1vw;
+.cuadroTexto2, .cuadroTexto2_tablet, .cuadroTexto2_celular{
+    box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0; padding: 1.7vw; border-radius: 1.7vw; gap: 1.7vw;
 }
 @media screen and (min-width: 1401px) {
     .logos{
         width: 8.33%;
-        height: 4.68%;
+        height: 4.68%;  
         top: 3.90%;
         left: 3.90%;
         gap: 3.90%;
@@ -152,7 +55,7 @@ label{
     }
     .instrucciones{
         font-size: 1vw;
-        width: 17.5%;
+        width: 20.5%;
         height: 1.75%;
         top: 83.10%;
         left: 16.66%;
@@ -172,21 +75,20 @@ label{
     }
 
     .cuadroTexto2{
-        width: 23.33%;
-        height: 85.93%;
-        top: 3.90%;
-        left: 71.66%;
-        background-image: url("/imagenes/Muñeco.png");
-        background-size: 22vw;
-        background-repeat: no-repeat;
-        background-position: center 30%;
+        display: flex;
+        position: absolute;
+        width: 23.33%; height: 87.18%;
+        top: 3.90%; left: 71.66%;
+        background-image: url("/imagenes/Muñeco.png"); background-size: 22vw; background-repeat: no-repeat; background-position: center 30%;
+        }
+    .cuadroTexto2_tablet{
+        display: none;
+    }
+    .cuadroTexto2_celular{
+        display: none;
     }
     #texto_encriptado{
-        width: 23.33%;
-        height: 54.23%;
-        top: 7.03%;
-        left: 71.66%;
-
+        font-size: 2vw;
     }
     #texto_bajoimagen{
         width: 90%;
@@ -195,18 +97,29 @@ label{
         left: 7%;
         gap: 1vw;
     }
+    #cuadroTexto3{
+        line-height: 2vw;
+        font-size: 2vw;
+    }
+    #cuadroTexto4{
+        font-size: 1vw;
+        line-height: 1.5vw;
+    }
     .boton_copiar{
-        display: none;
+        position: absolute;
         width: 84%;
-        height: 7.61%;
-        bottom: 1.7vw;
-        left: 1.7w;
+        height: 7.1%;
+        bottom: 2.2vw;
+        left: 2.2vw;
         padding: 1.5vw;
         gap: .5vw;
+        background: none;
     }
-    #nombre{
+    #pie{
+        top: 97%;
+        left: 90%;
         font-size: 1vw;
-    }
+    }   
 }
 @media screen and (min-width: 481px) and (max-width: 1400px){
     
@@ -217,6 +130,7 @@ label{
         left: 5.20%; 
     }
     .cuadroTexto{
+        font-family: Inter;
         line-height: 4vw;
         font-size: 5vw;
         width: 89.58%;
@@ -225,7 +139,7 @@ label{
         left: 5.20%;
     }
     .instrucciones{
-        width: 29.81%;
+        width: 38%;
         height: 1.53%;
         top: 71.20%;
         left: 5.20%;
@@ -250,22 +164,28 @@ label{
         font-size: 2vw;
 
     }
-    .boton_encriptar{
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    }
+    
     .boton_desencriptar{
     background: none;
     }
     .cuadroTexto2{
-        width: 89.58%;
-        height: auto;
+        display: none;
+    }
+    #cuadro_Texto_Encriptado_tablet{
+        font-size: 3vw;
+        position: absolute;
+        display: flex;
+        width: 83.58%;
+        height: 7.32%;
         top: 85.26%;
         left: 5.20%;
-        padding: 2vw 2vw 16vw 2vw;
-        margin: 0 0 2vw 0;
+    }
+    .cuadroTexto2_celular{
+        display: none;
     }
     #texto_bajoimagen{
-        width: 90.69%;
+        left: 20vw; top: 4vw;
+        width: 65.69%;
         height: 51.87%;
     }
     #cuadroTexto3{
@@ -279,11 +199,11 @@ label{
         height: 18.04%;
     }
     #texto_encriptado{
-        font-size: 2vw;
-        line-height: 4vw;
-        font-size: 3vw;
+        display: none;
     }
     .boton_copiar{
+        position: absolute;
+        background: none;
         font-size: 2vw;
         width: 90.69%;
         height: 64px;
@@ -345,15 +265,22 @@ label{
             font-size: 1vw;
         }
         .cuadroTexto2{
+            display: flex;
+            position: absolute;
             width: 23.33%;
             height: 91.93%;
             top: 3.90%;
-            left: 71.66%;
-            padding: 0 0 0 0;
+            left: 71.66%;   
             background-image: url("/imagenes/Muñeco.png");
             background-size: 22vw;
             background-repeat: no-repeat;
             background-position: center 30%;
+        }
+        .cuadroTexto2_tablet{
+            display: none;
+        }
+        .cuadroTexto2_celular{
+            display: none;
         }
         #texto_encriptado{
             display: flex;
@@ -366,6 +293,9 @@ label{
             font-size: 1.4vw;
             line-height: 2vw;
     
+        }
+        #texto_encriptado_movil{
+            display: none;
         }
         #texto_bajoimagen{
             width: 90%;
@@ -418,7 +348,7 @@ label{
         
             }
             .instrucciones{
-                width: 61.06%;
+                width: 70.06%;
                 height: 1.92%;
                 top: 48.33%;
                 left: 4.26%;
@@ -427,6 +357,7 @@ label{
             }
         
             .botones_encriptar_desencriptar{
+                display: grid;
                 width: 91.46%;
                 height: 16.93%;
                 top: 51.98%;
@@ -443,21 +374,26 @@ label{
             }
             .boton_desencriptar{
                 background: none;
+                display: grid;
             }
             .cuadroTexto2{
+                display: none;
+            }
+            .cuadroTexto2_tablet{
+                display: none;
+            }
+            .cuadroTexto2_celular{
                 position: absolute;
-        
+                display: flex;
                 width: 86.13%;
-                height: auto;
+                height: 20%;
                 top: 72.34%;
                 left: 4.5vw;
-                padding: 1.7vw 1.7vw 50vw 1.7vw;
-                border-radius: 32px;
-                gap: 32px;
-                box-shadow: 0px 1.5vw 2vw -.5vw #00000014;
+                margin-bottom: 60vw;
+                box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
             }
             #texto_encriptado{
-                font-size: 4vw;
+                display: none;
             }
             #cuadroTexto3{
                 font-family: Inter;
@@ -476,14 +412,17 @@ label{
                 text-align: center;
             }
             .boton_copiar{
+                position: absolute;
                 width: 98.34%;
-                height: 23%;
-                bottom: 2%;
+                height: 9%;
+                bottom: 2vw;
                 left: 2vw;
+                border-radius: 6vw;
                 border-color: white;
                 padding: 0 0 0 0;
                 gap: 1vw;
                 font-size: 6vw;
+                background: none;
         
             }
             #nombre{
