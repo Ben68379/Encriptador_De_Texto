@@ -1,4 +1,5 @@
 button{
+    
     box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
     border-radius: 1.5vw;
     font-size: 1vw;
@@ -13,6 +14,7 @@ button{
     background-clip: text;
     -webkit-text-fill-color:transparent;
 }
+
 .boton_encriptar{
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
@@ -20,21 +22,31 @@ button{
     background: none;
 }
 .boton_encriptar:hover{
+    
+    scale: .9;
     background: gainsboro;
     transition: 1s;
 
 }
 .boton_desencriptar:hover{
-    background:#FDE08D;
+    scale: .9;
+    color: gainsboro;
+    background: #352506;
     transition: 1s;
 }
+
 .boton_copiar:hover{
-    background:#FDE08D;
+    scale: .9;
+    background: darkgoldenrod;
+    transition: 1s;
+}
+.boton_encriptar:not(:hover), .boton_desencriptar:not(:hover), .boton_copiar:not(:hover){
     transition: 1s;
 }
 .cuadroTexto2, .cuadroTexto2_tablet, .cuadroTexto2_celular{
     box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0; padding: 1.7vw; border-radius: 1.7vw; gap: 1.7vw;
 }
+
 @media screen and (min-width: 1401px) {
     .logos{
         width: 8.33%;
@@ -171,10 +183,9 @@ button{
     .cuadroTexto2{
         display: none;
     }
-    #cuadro_Texto_Encriptado_tablet{
+    .cuadroTexto2_tablet{
         font-size: 3vw;
         position: absolute;
-        display: flex;
         width: 83.58%;
         height: 7.32%;
         top: 85.26%;
@@ -183,8 +194,8 @@ button{
     .cuadroTexto2_celular{
         display: none;
     }
-    #texto_bajoimagen{
-        left: 20vw; top: 4vw;
+    #texto_bajoimagen_tablet{
+        left: 16vw; top: 2vw;
         width: 65.69%;
         height: 51.87%;
     }
@@ -328,105 +339,130 @@ button{
         }
     }
 }
-@media screen and (max-width: 480px){   
+@media screen and (max-width: 480px){
+    main {
+        position: relative;
+        min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
+    }
         .logos{
-                width: 20%;
-                height: 5.14%;
-                top: 2vw;
-                left: 1.5vw;
+            transition: 1s;
+            width: 20%;
+            height: 5.14%;
+            top: 2vw;
+            left: 1.5vw;
             }
         .logotipo{
             height: 100%;
         }
-            .cuadroTexto{
-                width: 91.46%;
-                line-height: 7vw;
-                height: 30.86%;
-                top: 16.29%;
-                left: 4.26%;
-                font-size: 6vw;
-        
-            }
-            .instrucciones{
-                width: 70.06%;
-                height: 1.92%;
-                top: 48.33%;
-                left: 4.26%;
-                gap: .7vw;
-                font-size: 4vw;
-            }
-        
-            .botones_encriptar_desencriptar{
-                display: grid;
-                width: 91.46%;
-                height: 16.93%;
-                top: 51.98%;
-                left: 4.26%;
-                gap: .5vw;
-        
-            }
-            .boton_encriptar, .boton_desencriptar{
-                width: 100%;
-                font-size: 5vw;
-                height: 90%;
-                border-radius: 7vw;
-        
-            }
-            .boton_desencriptar{
-                background: none;
-                display: grid;
-            }
-            .cuadroTexto2{
-                display: none;
-            }
-            .cuadroTexto2_tablet{
-                display: none;
-            }
-            .cuadroTexto2_celular{
-                position: absolute;
-                display: flex;
-                width: 86.13%;
-                height: 20%;
-                top: 72.34%;
-                left: 4.5vw;
-                margin-bottom: 60vw;
-                box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
-            }
-            #texto_encriptado{
-                display: none;
-            }
-            #cuadroTexto3{
-                font-family: Inter;
-                font-size: 7vw;
-                font-weight: 700;
-                line-height: 6vw;
-                letter-spacing: 0em;
-                text-align: center;
-            }
-            #cuadroTexto4{
-                font-family: Inter;
-                font-size: 4vw;
-                font-weight: 400;
-                line-height: 6vw;
-                letter-spacing: 0em;
-                text-align: center;
-            }
-            .boton_copiar{
-                position: absolute;
-                width: 98.34%;
-                height: 9%;
-                bottom: 2vw;
-                left: 2vw;
-                border-radius: 6vw;
-                border-color: white;
-                padding: 0 0 0 0;
-                gap: 1vw;
-                font-size: 6vw;
-                background: none;
-        
-            }
-            #nombre{
-                font-size: 2vw;
-            }
+        .cuadroTexto{
+            transition: 1s;
+            width: 91.46%;
+            line-height: 7vw;
+            height: 30.86%;
+            top: 16.29%;
+            left: 4.26%;
+            font-size: 6vw;
+    
+        }
+        .instrucciones{
+            transition: 1s;
+            width: 74%;
+            height: 2.3%;
+            top: 48.33%;
+            left: 4.26%;
+            gap: .7vw;
+            font-size: auto;
+            
+        }
+    
+        .botones_encriptar_desencriptar{
+            transition: 1s;
+            display: grid;
+            width: 91.46%;
+            height: 16.93%;
+            top: 51.98%;
+            left: 4.26%;
+            gap: .5vw;
+    
+        }
+        .boton_encriptar, .boton_desencriptar{
+            width: 100%;
+            font-size: 5vw;
+            height: 90%;
+            border-radius: 7vw;
+    
+        }
+        .boton_desencriptar{
+            background: none;
+            display: grid;
+        }
+        .cuadroTexto2{
+            display: none;
+        }
+        .cuadroTexto2_tablet{
+            display: none;
+        }
+        .cuadroTexto2_celular{
+            transition: 1s;
+            position: absolute;
+            display: flex;
+            width: 86.13%;
+            height: 20%;
+            top: 72.34%;
+            left: 4.5vw;
+            box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
+        }
+        #texto_encriptado{
+            display: none;
+        }
+        #texto_bajoimagen_celular{
+            top: 10vw;
+
+        }
+        #cuadroTexto3{
+            font-family: Inter;
+            font-size: 7vw;
+            font-weight: 700;
+            line-height: 6vw;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+        #cuadroTexto4{
+            font-family: Inter;
+            font-size: 4vw;
+            font-weight: 400;
+            line-height: 6vw;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+        .boton_copiar{
+            position: absolute;
+            width: 98.34%;
+            height: 9%;
+            bottom: 4vw;
+            left: 2vw;
+            border-radius: 6vw;
+            border-color: white;
+            padding: 0 0 0 0;
+            gap: 1vw;
+            font-size: 6vw;
+            background: none;
+    
+        }
+        #pie{
+            transition: 1s;
+            position: relative;
+            width: 57%; height: 9%;
+            bottom: -18vw;
+            left: 2%;
+        }
+        #github_logo, #linkedin_logo{
+            display: inline-block;
+            width: 20%;
+        }
+        #nombre, #version{
+            display: grid;
+            font-size: 2vw;
+        }
 }
 
