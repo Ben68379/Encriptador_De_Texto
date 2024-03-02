@@ -78,12 +78,15 @@ function mostarContenido(){
   texto_bajoimagen.style = 'display: none;';
   texto_bajoimagen_tablet.style = 'display: none;';
   texto_bajoimagen_celular.style = 'display: none;';
-  copiar_click.style = 'display: grid;';
-  copiar_click_tablet.style = 'display: grid;';
-  copiar_click_celular.style = 'display: grid;';
+  copiar_click.style = 'display: static; background:none; transition: 1s; :hover: scale: .9;';
+  copiar_click_tablet.style = 'display: static; background:none; transition: 1s; :hover: scale: .9;';
+  copiar_click_celular.style = 'display: static; background:none; transition: 1s; :hover: scale: .9;';
+  copiar_click.style = 'background: rgba(0, 255, 0, .5); transition: 1s';
+  document.getElementById('copiar_click').innerHTML = "Copiar";
+  document.getElementById('copiar_click_celular').innerHTML = "Copiar";
+  document.getElementById('copiar_click_tablet').innerHTML = "Copiar";
   cuadro_Texto_Encriptado_tablet.style = `height: 20%; transition: 1s`;
   cuadro_Texto_Encriptado_celular.style = "height: 70%; transition: 1s;";
-  copiar_click.style = 'background: none;';
   document.getElementById('copiar_click').innerHTML = "Copiar";
 }
 function limpiarCaja2(){
@@ -131,13 +134,13 @@ async function copiarTextoAlPortapapeles(texto) {
  }
 
  function escalar_mensaje(){
-  texto_bajoimagen_tablet.style = 'transform: scale(1.5); transition: 1s; background: red; display: grid; position: absolute; border-radius:1.5vw;';
+  texto_bajoimagen_tablet.style = 'transform: scale(1.5); transition: 1s; background: rgba(255, 0, 0, .5); display: grid; position: absolute; border-radius:1.5vw;';
   setTimeout(() => {
   texto_bajoimagen_tablet.style = 'transform: scale(1); transition: 1s; background: none; display: grid; position: absolute;';}, 1000);
-  texto_bajoimagen_celular.style = 'transform: scale(1.1); transition: 1s; background: red; display: grid; position: absolute; border-radius:1.5vw;';
+  texto_bajoimagen_celular.style = 'transform: scale(1.1); transition: 1s; background: rgba(255, 0, 0, .5); display: grid; position: absolute; border-radius:1.5vw;';
   setTimeout(() => {
   texto_bajoimagen_celular.style = 'transform: scale(1); transition: 1s; background: none; display: grid; position: absolute;';}, 1000);
-  texto_bajoimagen.style = 'transform: scale(1.2); transition: 1s; background: red; display: grid; position: absolute; border-radius:1.5vw;';
+  texto_bajoimagen.style = 'transform: scale(1.2); transition: 1s; background: rgba(255, 0, 0, .5); display: grid; position: absolute; border-radius:1.5vw;';
   setTimeout(() => {
   texto_bajoimagen.style = 'transform: scale(1); transition: 1s; background: none; display: grid; position: absolute;';}, 1000);
  }
