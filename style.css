@@ -131,8 +131,8 @@ button{
     #pie{
         transition: 1s;
         position: relative;
-        width: 100%; height: 30%;
-        bottom: -17vw;
+        width: 100%; height: 6%;
+        bottom: -5vw;
     }
     #github_logo, #linkedin_logo{
         
