@@ -14,7 +14,3 @@ texto y se da la opcion de encriptar, desencriptar y copiar
 <p align="center">
   <img src="/imagenes/Screenshot2.png" alt="pantalla principal screenshot"/>
 </p>
-
-<p align="center">
-<iframe src="https://ben68379.github.io/Encriptador_De_Texto/"></iframe>
-</p>
