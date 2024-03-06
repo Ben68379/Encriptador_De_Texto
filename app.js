@@ -74,7 +74,7 @@ function copiar(){
   copiarTextoAlPortapapeles(texto);
 }
 function mostarContenido(){
-  cuadro_Texto_Encriptado.style = 'background-image: none;';
+  cuadro_Texto_Encriptado.style = 'background-image: none; display:flex; position: absolute;';
   texto_bajoimagen.style = 'display: none;';
   texto_bajoimagen_tablet.style = 'display: none;';
   texto_bajoimagen_celular.style = 'display: none;';
