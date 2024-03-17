@@ -1,493 +1,363 @@
+*{
+    font-family: Inter;
+}
 html{
-    background: -webkit-linear-gradient(left, #8f6B29, #FDE08D, #DF9F28);
-    padding:5px 0 0;
+    background: -webkit-linear-gradient(left, #ebd77e, #edc966, #f0b834d6);
     
+    position: relative;
+    min-width: 100vh;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la ventana */
 }
-main{
-    display: flex;
-}
+
+
 button{
-    box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
-    border-radius: 1.5vw;
-    font-size: 1vw;
-    gap: .5vw;
-    border-color: white;
+    transition: 1s; box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0; border-radius: 1.5vw; font-size: 1vw; font-weight: 3vw; gap: .5vw; border-color: white; border-width: .2vw;
 }
 .logos{
-    position: absolute;
+    height: 20vw;
 }
 .logotipo{
-    height: 100%;
+    height: 40%;
+    padding: 2vw;
 }
 .cuadroTexto{
-    position: absolute;
-
-    font-family: Inter;
-    font-size: 2.5vw;
-    font-weight: 400;
-    line-height: 3vw;
-    letter-spacing: 0em;
-    text-align: left;
-
-    border: none;
-    outline: none;
-    resize: none;
-    background: none;
+    transition: 1s;
+    margin: 0 0 0 4vw;
+    width: 90%;
+    line-height: 7vw;
+    height: 64vw;
+    font-size: 6vw;
 
 }
 .cuadroTexto::placeholder{
-    color: black;
-    font-weight: 700;
-    background-image: linear-gradient(45deg, black, transparent);
-    background-clip: text;
-    -webkit-text-fill-color:transparent;
+    color: rgba(0, 0, 0, .7);
 }
 .instrucciones{
-    position: absolute;
-}
-label{
-    width: 300px;
+    margin: 0 0 0 4vw;
+    transition: 1s;
+    width: 74%;
+    height: 9vw;
+    font-size: 4vw;
+    border-radius: 1.5vw;
+    
 }
 .botones_encriptar_desencriptar{
-    
-    position: absolute;
+    margin: 0 0 0 4vw;
     display: grid;
+    transition: 1s;
+    width: 90%;
+    height: 30vw;
 
 }
 .boton_encriptar, .boton_desencriptar{
-    
-    display: block;
-    padding: 1.5vw;
-    gap: 8px;
+    width: 100%;
+    font-size: 5vw;
+    height: 90%;
+    border-radius: 7vw;
 
 }
 .boton_encriptar{
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
+
 .boton_desencriptar{
     background: none;
 }
 .boton_encriptar:hover{
+    
+    scale: .9;
     background: gainsboro;
     transition: 1s;
 
 }
 .boton_desencriptar:hover{
-    background:#FDE08D;
+    scale: .9;
+    color: gainsboro;
+    background: #352506;
     transition: 1s;
 }
-.cuadroTexto2{
-    position: absolute;
 
-    padding: 1.7vw;
-    border-radius: 1.7vw;
-    gap: 1.7vw;
-    box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0;
+.boton_encriptar:not(:hover), .boton_desencriptar:not(:hover), .boton_copiar:not(:hover){
+    scale: 1;
+    transition: 1s;
 }
-#texto_encriptado{
-    font-family: Inter;
-    font-size: 1.5vw;
-    font-weight: 400;
-    line-height: 2vw;
-    letter-spacing: 0em;
-    text-align: left;
+.segundo_bloque{
+    height: 36vw;
+}
 
+.cuadroTexto2{
+    width: 105vw;
+    height: 18vw;
+    margin: 4vw 0 0 4vw;
+    transition: 1s;
+    box-shadow: 0px 1.5vw 1.7vw -0.5vw #f0eaeaf0;
+    transition: 1s;
+    box-shadow: 0px 1.5vw 1.7vw -.5vw #f0eaeaf0; padding: 1.7vw; border-radius: 1.7vw; gap: 1.7vw;
+}
+
+    
+#texto_encriptado{
+    max-height: 50vw;
+    display: none;
+    height: 5vw;
+    width: 90%;
 }
 #texto_bajoimagen{
-    display: grid;
-    position: absolute;
+    border-radius: 1.5vw;
+    margin: 1vw 0 0 16vw;
+    height: 4vw;
+    width: 76vw;
+    text-align: center;
 }
 #cuadroTexto3{
     font-family: Inter;
-    font-size: 2vw;
+    font-size: 4vw;
     font-weight: 700;
-    line-height: 2vw;
+    line-height: 6vw;
     letter-spacing: 0em;
     text-align: center;
 }
 #cuadroTexto4{
     font-family: Inter;
-    font-size: 1vw;
+    font-size: 3vw;
     font-weight: 400;
-    line-height: 1.5vw;
+    line-height: 6vw;
     letter-spacing: 0em;
     text-align: center;
 }
+
 .boton_copiar{
-    position: absolute;
     display: none;
+    width: 91.5%;
+    height: 9%;
+    bottom: 4vw;
+    left: 3vw;
+    border-radius: 6vw;
     border-color: white;
+    padding: 0 0 0 0;
+    gap: 1vw;
+    font-size: 6vw;
     background: none;
+
 }
 .boton_copiar:hover{
-    background:#FDE08D;
+    scale: .9;
+    background: darkgoldenrod;
     transition: 1s;
 }
-#pie{
-    display: flex;
-    position: absolute;
-    top: 97%;
-    left: 90%;
+footer{
+    transition: 1s;
+    width: 90%; 
+    height: 30px;
+    left: 5%;
+    bottom: -26vw;
 }
-#nombre{
-    font-size: 1vw;
-}
-@media screen and (min-width: 1401px) {
-    .logos{
-        width: 8.33%;
-        height: 4.68%;
-        top: 3.90%;
-        left: 3.90%;
-        gap: 3.90%;
-    }
-    .cuadroTexto{
-        font-size: 2.5vw;
-        width: 47.22%;
-        height: 64.45%;
-        top: 16.40%;
-        left: 16.66%;
-    }
-    .cuadroTexto::placeholder{
-        font-size: 2.5vw;
-    }
-    .instrucciones{
-        font-size: 1vw;
-        width: 17.5%;
-        height: 1.75%;
-        top: 83.10%;
-        left: 16.66%;
-        gap: 8px;
-    }
-    .botones_encriptar_desencriptar{
-        display: flex;
-        width: 47.22%;
-        height: 6.54%;
-        top: 86.42%;
-        left: 16.66%;
-        gap: 1.5vw;
-    }
-    .boton_encriptar, .boton_desencriptar{
-        width: 47.77%;
-        height: 100%;
-    }
-
-    .cuadroTexto2{
-        width: 23.33%;
-        height: 85.93%;
-        top: 3.90%;
-        left: 71.66%;
-        background-image: url("/imagenes/Muñeco.png");
-        background-size: 22vw;
-        background-repeat: no-repeat;
-        background-position: center 30%;
-    }
-    #texto_encriptado{
-        width: 23.33%;
-        height: 54.23%;
-        top: 7.03%;
-        left: 71.66%;
-
-    }
-    #texto_bajoimagen{
-        width: 90%;
-        height: 11.91%;
-        top: 53.41%;
-        left: 7%;
-        gap: 1vw;
-    }
-    .boton_copiar{
-        display: none;
-        width: 84%;
-        height: 7.61%;
-        bottom: 1.7vw;
-        left: 1.7w;
-        padding: 1.5vw;
-        gap: .5vw;
-    }
-    #nombre{
-        font-size: 1vw;
-    }
-}
-@media screen and (min-width: 481px) and (max-width: 1400px){
+#github_logo, #linkedin_logo{
     
-    .logos{
-        width: 4.04%;
-        height: 4.30%;
-        top: 6.25%;
-        left: 5.20%; 
-    }
-    .cuadroTexto{
-        line-height: 4vw;
-        font-size: 5vw;
-        width: 89.58%;
-        height: 48.55%;
-        top: 20.44%;
-        left: 5.20%;
-    }
-    .instrucciones{
-        width: 29.81%;
-        height: 1.53%;
-        top: 71.20%;
-        left: 5.20%;
-        gap: .5vw;
+    display: inline-block;
+    height: 100%;
+}
+#githublink, #linkedinlink{  
+    height: 100%;
+    width: 48%;
+    font-size: 3.5vw;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0, 0, 0, .7 );
+}
+#githublink:hover, #linkedinlink:hover{
+    transition: 1s;
+    scale: 1.2;
+}
+#githublink:not(:hover), #linkedinlink:not(:hover){
+    transition: 1s;
+    scale: 1;
+}
 
-    }
-    .botones_encriptar_desencriptar{
-        display: flex;
-        width: 89.58%;
-        height: 5.70%;
-        top: 74.10%;
-        left: 5.20%;
-        gap: 1.5vw;
+#nombre, #version{
+    vertical-align: top;
+    font-size: 1.5vw;
+    font-weight: 700;
+    height: 1.5vw;
+}
+#version{
+    display: block;
+    
+}
 
-    }
-    .boton_encriptar, .boton_desencriptar{
-        width: 48.25%;
-        height: 100%;
-        padding: 1.5vw;
-        border-radius: 2.5vw;
-        gap: .5vw;
-        font-size: 2vw;
+    @media screen and (min-width: 425px){
 
-    }
-    .boton_encriptar{
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    }
-    .boton_desencriptar{
-    background: none;
-    }
-    .cuadroTexto2{
-        width: 89.58%;
-        height: auto;
-        top: 85.26%;
-        left: 5.20%;
-        padding: 2vw 2vw 16vw 2vw;
-        margin: 0 0 2vw 0;
-    }
-    #texto_bajoimagen{
-        width: 90.69%;
-        height: 51.87%;
-    }
-    #cuadroTexto3{
-        font-size: 3vw;
-        width: 90.69%;
-        height: 21.80%;
-    }
-    #cuadroTexto4{
-        font-size: 2vw;
-        width: 90.69%;
-        height: 18.04%;
-    }
-    #texto_encriptado{
-        font-size: 2vw;
-        line-height: 4vw;
-        font-size: 3vw;
-    }
-    .boton_copiar{
-        font-size: 2vw;
-        width: 90.69%;
-        height: 64px;
-        padding: 1.5vw;
-        border-radius: 1.5vw;
-        gap: .5vw;
-        bottom: 1.7vw;
-        left: 1.7vw;
+        .logos{
+            height: 10vw;
+        }
 
-    }
-    #nombre{
-        font-size: 2vw;
-    }
-    @media screen and (min-aspect-ratio: 4/3) {
-        button{
+        .cuadroTexto{
+            font-size: 3vw;
+        }
+       
+        .instrucciones{
+            width: 30%;
+            font-size: 1.5vw;
+        }
+    
+        .botones_encriptar_desencriptar{
+            display: flex;
+            height: 8vw;
+            gap: 2vw;
+    
+        }
+        .boton_encriptar, .boton_desencriptar{
+            width: 47%;
+            font-size: 2vw;
+            border-radius: 2vw;
+            
+        }
+        .cuadroTexto2{
+            width: 86vw;
+        }
+        #texto_bajoimagen{
+            width: 87vw;
+            margin: 0;
+
+        }
+        .cuadroTexto3{
+            font-size: 2vw;
+        }
+        .cuadroTexto4{
             font-size: 1vw;
         }
-        .logos{
-            width: 8.33%;
-            height: 4.68%;
-            top: 3.90%;
-            left: 3.90%;
-            gap: 3.90%;
+        #texto_encriptado{
+            width: 5vw;
         }
-        
-        .logotipo{
-            height: 100%;
+        .boton_copiar{
+            font-size: 2vw;
+            width: 5vw;
+        }
+    }
+
+    @media screen and (min-aspect-ratio: 4/3) {/*landscape*/
+    
+        .logos{
+            height: 7vw;
+            width: 70vw;
+        }
+        .primer_bloque{
+            width: 70vw;
+            height: 50vw;
+        }
+        .segundo_bloque{
+            vertical-align: top;
+            height: 50vw;
+            width: 28vw;
         }
         .cuadroTexto{
             font-size: 2.5vw;
-            width: 47.22%;
-            height: 64.45%;
-            top: 16.40%;
-            left: 16.66%;
+            width: 70%;
+            height: 32vw;
+            margin: 3% 0 0 13vw;
         }
         .cuadroTexto::placeholder{
             font-size: 2.5vw;
         }
         .instrucciones{
+            margin: 3% 0 0 13vw;
             font-size: 1vw;
-            width: 17.5%;
-            height: 1.75%;
-            top: 83.10%;
-            left: 16.66%;
-            gap: 8px;
+            width: 30%;
+            height: 1vw;
+            border-radius:3vw;
+        }
+        #exclamacion{
+            height: 100%;
         }
         .botones_encriptar_desencriptar{
+            margin: 3% 0 0 13vw;
             display: flex;
-            width: 47.22%;
-            height: 6.54%;
-            top: 86.42%;
-            left: 16.66%;
+            width: 70%;
+            height: 3.5vw;
             gap: 1.5vw;
-    
         }
         .boton_encriptar, .boton_desencriptar{
-            width: 47.77%;
+
+            width: 47.77%;border-radius: 1.2vw;
             height: 100%;
             font-size: 1vw;
         }
+
         .cuadroTexto2{
-            width: 23.33%;
-            height: 91.93%;
-            top: 3.90%;
-            left: 71.66%;
-            padding: 0 0 0 0;
-            background-image: url("/imagenes/Muñeco.png");
-            background-size: 22vw;
-            background-repeat: no-repeat;
-            background-position: center 30%;
+            margin: 2vw 0 0 0;
+            height: 47vw;
+            width: 20vw;
+            background-image: url("imagenes/Muñeco.png"); background-size: 22vw; background-repeat: no-repeat; background-position: center 30%;
         }
         #texto_encriptado{
-            display: flex;
-            position: absolute;
-            left: 3%;
-            width: 77.33%;
-            height: 54.23%;
-            top: 7.03%;
-            left: 13.66%;
-            font-size: 1.4vw;
-            line-height: 2vw;
-    
+            margin: 2VW 0VW;
+            background: none;
+            outline: none;
+            border: none;
+            resize: none;
+            width: 100%;
+            height: 70%;
+            font-size: 2vw;
         }
         #texto_bajoimagen{
-            width: 90%;
-            height: 11.91%;
-            top: 59.41%;
-            left: 7%;
-            gap: 1vw;
+            top: 30vw;
+            position: relative;
+            text-align: center;
+            width: 20vw; height: 8vw;
+            transform: scale(1);
+            transition: all 1s ease 0s;
+            background: none;
+            border-radius: 1.5vw;
         }
         #cuadroTexto3{
+            text-align: center; font-weight: 700; letter-spacing: 0em;
+            line-height: 2vw;
             font-size: 2vw;
         }
         #cuadroTexto4{
             font-size: 1vw;
-        }
-        #texto_encriptado{
-            word-break: break-all;
+            line-height: 1.5vw;
         }
         .boton_copiar{
+            border-radius: 1.2vw;
+            font-size: 3vw;
             display: none;
-            width: 84%;
-            height: 7.61%;
-            bottom: 1.7vw;
-            left: 1.7w;
-            padding: 1.5vw;
-            gap: .5vw;
+            margin: 8vw 0px 0 0;
+            width: 100%;
+            height: 7.1%;
+            background: none;
             font-size: 1vw;
         }
-        #nombre{
+        footer{
+            text-align: center;
+            height: 5vw;
+        }
+        #githublink, #linkedinlink{
+            margin: 2vw 0 0 0;
+            width: 20%;
+            height: 3vw;  
             font-size: 1.5vw;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            color: rgba(0, 0, 0, .7 );
         }
-    }
-}
-@media screen and (max-width: 480px){   
-        .logos{
-                width: 20%;
-                height: 5.14%;
-                top: 2vw;
-                left: 1.5vw;
-            }
-        .logotipo{
-            height: 100%;
-        }
-            .cuadroTexto{
-                width: 91.46%;
-                line-height: 7vw;
-                height: 30.86%;
-                top: 16.29%;
-                left: 4.26%;
-                font-size: 6vw;
-        
-            }
-            .instrucciones{
-                width: 61.06%;
-                height: 1.92%;
-                top: 48.33%;
-                left: 4.26%;
-                gap: .7vw;
-                font-size: 4vw;
-            }
-        
-            .botones_encriptar_desencriptar{
-                width: 91.46%;
-                height: 16.93%;
-                top: 51.98%;
-                left: 4.26%;
-                gap: .5vw;
-        
-            }
-            .boton_encriptar, .boton_desencriptar{
-                width: 100%;
-                font-size: 5vw;
-                height: 90%;
-                border-radius: 7vw;
-        
-            }
-            .boton_desencriptar{
-                background: none;
-            }
-            .cuadroTexto2{
-                position: absolute;
-        
-                width: 86.13%;
-                height: auto;
-                top: 72.34%;
-                left: 4.5vw;
-                padding: 1.7vw 1.7vw 50vw 1.7vw;
-                border-radius: 32px;
-                gap: 32px;
-                box-shadow: 0px 1.5vw 2vw -.5vw #00000014;
-            }
-            #texto_encriptado{
-                font-size: 4vw;
-            }
-            #cuadroTexto3{
-                font-family: Inter;
-                font-size: 7vw;
-                font-weight: 700;
-                line-height: 6vw;
-                letter-spacing: 0em;
-                text-align: center;
-            }
-            #cuadroTexto4{
-                font-family: Inter;
-                font-size: 4vw;
-                font-weight: 400;
-                line-height: 6vw;
-                letter-spacing: 0em;
-                text-align: center;
-            }
-            .boton_copiar{
-                width: 98.34%;
-                height: 23%;
-                bottom: 2%;
-                left: 2vw;
-                border-color: white;
-                padding: 0 0 0 0;
-                gap: 1vw;
-                font-size: 6vw;
-        
-            }
-            #nombre{
-                font-size: 2vw;
-            }
-}
 
+        svg{
+            width: 20%;
+        }
+        #nombre, #version{
+            font-size: 1.5vw;
+            font-weight: 700;
+            height: 1.5vw;
+        }
+        #version{
+            display: block;
+            
+        }
+        .primer_bloque, .segundo_bloque{
+            display: inline-block;
+        }
+            
+    }

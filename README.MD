@@ -1,7 +1,8 @@
 <p align="center">
   <img src="/imagenes/Muñeco.png" alt="challenge encriptador"/>
 </p>
-## Encriptador de Texto
+
+## Encriptador de Texto 
 
 Simple encriptador de texto en el que se ingresa un 
 texto y se da la opcion de encriptar, desencriptar y copiar
