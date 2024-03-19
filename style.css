@@ -30,7 +30,7 @@ body{
     padding: 6vw;
     width: 93vh;
     transition: 1s;
-    line-height: 7vw;
+    line-height: 12vw;
     height: 70vh;
     font-size: 12vw;
 
@@ -97,7 +97,7 @@ body{
 
 .cuadroTexto2{
     width: 93vh;
-    height: 32vh;
+    height: 45vh;
     transition: 1s;
     box-shadow: 0px 1.5vw 1.7vw -0.5vw #f0eaeaf0;
     transition: 1s;
@@ -108,10 +108,15 @@ body{
 
     
 #texto_encriptado{
+    font-size: 9vw;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 4vh;
+    width: 90vh;
+    height: 25vh;
     max-height: 50vw;
     display: none;
-    height: 5vw;
-    width: 90%;
 }
 #texto_bajoimagen{
     border-radius: 1.5vw;
@@ -141,14 +146,11 @@ body{
 
 .boton_copiar{
     display: none;
-    width: 91.5%;
-    height: 9%;
-    bottom: 4vw;
-    left: 3vw;
+    width: 90vh;
+    height: 12vh;
+    margin: 2vh;
     border-radius: 6vw;
     border-color: white;
-    padding: 0 0 0 0;
-    gap: 1vw;
     font-size: 6vw;
     background: none;
 
