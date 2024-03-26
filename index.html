@@ -13,32 +13,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <section class="primer_bloque">
     <!--Encabezado-->
+        <div class="primer_bloque">
             <header class="logos">
                 <a href="index.html"><img id="test" class="logotipo" src="imagenes/logo.png" alt="Logo alura"></a>
             </header>
 
             <main>
-    <!--cuadro entrada de texto a encriptar-->        
-                <textarea maxlength="330" class="cuadroTexto" rows="auto" cols="auto" id="texto_a_encriptar"  required placeholder="Ingrese el texto aqui" style="border: none; outline: none; resize: none; background: none;"></textarea>
-    <!--instrucciones debajo del cuadro de texto-->                    
-                <div class="instrucciones" id="elemento_instrucciones">
-                    <img src= "imagenes/bi_exclamation-circle-fill.png" id="exclamacion" alt="Simbolo de exclamacion"><label >Solo letras minúsculas y sin acentos</label>
-                </div>
-    <!--bloque botones de encriptar, desencriptar-->                    
-                <div class="botones_encriptar_desencriptar">
-                    <button onclick="encriptar();" class="boton_encriptar" id="encriptar_click">Encriptar</button>
-                    <button onclick="desencriptar();" class="boton_desencriptar">Desencriptar</button>
-                </div>
-            </main>
-
-        </section>
-
-        <section class="segundo_bloque">
-                
+            <!--cuadro entrada de texto a encriptar-->        
+                        <textarea maxlength="330" rows="auto" cols="auto" id="texto_a_encriptar"  required placeholder="Ingrese el texto aqui" style="border: none; outline: none; resize: none; background: none;"></textarea>
+            <!--instrucciones debajo del cuadro de texto-->                    
+                        <div class="instrucciones" id="elemento_instrucciones">
+                            <img src= "imagenes/bi_exclamation-circle-fill.png" id="exclamacion" alt="Simbolo de exclamacion"><label >Solo letras minúsculas y sin acentos</label>
+                        </div>
+            <!--bloque botones de encriptar, desencriptar-->                    
+                        <div class="botones_encriptar_desencriptar">
+                            <button onclick="encriptar();" class="boton_encriptar" id="encriptar_click">Encriptar</button>
+                            <button onclick="desencriptar();" class="boton_desencriptar">Desencriptar</button>
+                        </div>
+            </div>
     <!--cuadro de texto derecho desencriptado-->
-                <div class="cuadroTexto2" id="cuadro_Texto_Encriptado">
+            <div class="segundo_bloque">
 
                     <textarea id="texto_encriptado" readonly style="resize: none; background: none; outline: none; border: none;"></textarea>
 
@@ -48,10 +43,8 @@
                     </div>
 
                     <button onclick="copiar();" class="boton_copiar" id="copiar_click">Copiar</button>
-
-                </div>
-
-        </section>
+            </div>
+            </main>
         <footer id="pie">
             <!--github logo-->
                 <a href="https://github.com/Ben68379" id="githublink"><svg id="github_logo" aria-hidden="true" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default">

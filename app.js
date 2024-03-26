@@ -75,7 +75,7 @@ function copiar(){
 }
 function mostarContenido(){
   texto_encriptado.style = 'display: block';
-  cuadro_Texto_Encriptado.style = 'background-image: none;';
+  document.getElementsByClassName("segundo_bloque").style = 'background-image: none;';
   texto_bajoimagen.style = 'display: none;';
   copiar_click.style = 'display: block; background:none; transition: 1s; :hover: scale: .9;';
   document.getElementById('copiar_click').innerHTML = "Copiar";
@@ -123,7 +123,7 @@ async function copiarTextoAlPortapapeles(texto) {
 
  window.addEventListener('resize', function(event){
   if (window.matchMedia("min-aspect-ratio: 3/4").matches){
-    cuadro_Texto_Encriptado.style = 'background-image: none;';
+    document.getElementsByClassName("segundo_bloque").style = 'background-image: none;';
 
 
 
